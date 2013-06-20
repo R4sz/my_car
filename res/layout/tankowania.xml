@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/tankowania_header"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip" >
+
+        <View
+            android:id="@+id/tank_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/tankowania_label"
+            style="@style/detailsHeader"
+            android:text="Dodaj Tankowanie..." />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/save_icon"
+            android:onClick="saveNewTank" />
+    </RelativeLayout>
+ 
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_below="@id/tankowania_header"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white" 
+        android:layout_marginLeft="5dip" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tankowania_header"
+            >
+
+            <TextView
+                android:id="@+id/tankowania_przebieg_title"
+                style="@style/listviewContentTitles.padding5dip"
+                android:layout_alignBaseline="@+id/tankowania_przebieg"
+                android:layout_below="@id/tankowania_header"
+                android:text="Przebieg" />
+
+            <EditText
+                android:id="@+id/tankowania_przebieg"
+                style="@style/edittext"
+               android:layout_width="160dip"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/tankowania_przebieg_title"
+                android:hint="Cena za litr"
+                android:inputType="numberDecimal|text" >
+            </EditText>
+            
+            <TextView 
+                style="@style/listviewContentTitles.values"
+                 android:layout_below="@id/tankowania_header"
+                 android:layout_toRightOf="@id/tankowania_przebieg"
+                  android:layout_alignBaseline="@+id/tankowania_przebieg"
+                android:text="[km]"	
+                android:layout_marginLeft="1dip"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/ilosc_litrow_title"
+                style="@style/listviewContentTitles.padding5dip"
+                android:layout_below="@id/tankowania_przebieg"
+                android:text="Ilość litrów" 
+                android:layout_alignBaseline="@+id/tankowania_ilosc_wlanych_litrow"/>
+           
+            <EditText
+                android:id="@+id/tankowania_ilosc_wlanych_litrow"
+                style="@style/edittext"
+                android:layout_below="@id/tankowania_przebieg"
+                android:layout_alignLeft="@id/tankowania_przebieg"
+                android:inputType="numberDecimal|text"
+                android:layout_toRightOf="@id/ilosc_litrow_title" />
+      
+            <TextView
+                  style="@style/listviewContentTitles.values"
+                   android:layout_below="@id/tankowania_przebieg"
+                   android:layout_toRightOf="@id/tankowania_ilosc_wlanych_litrow" 
+                   android:textSize="12sp"
+                   android:layout_marginLeft="1dip"
+                    android:layout_alignBaseline="@+id/tankowania_ilosc_wlanych_litrow"
+                   android:text="[L]"/>
+            
+            
+
+                <TextView
+                    android:id="@+id/cena_za_litr_title"
+                    android:layout_below="@id/tankowania_ilosc_wlanych_litrow"
+                     style="@style/listviewContentTitles.padding5dip"
+                     android:layout_alignBaseline="@+id/tankowania_cena_za_litr"
+                    android:text="Cena za litr" />
+
+                <EditText
+                    style="@style/edittext"
+                    android:layout_below="@id/tankowania_ilosc_wlanych_litrow"
+                    android:layout_toRightOf="@id/cena_za_litr_title"
+                    android:id="@+id/tankowania_cena_za_litr"
+                    android:layout_alignLeft="@id/tankowania_przebieg"
+                    android:inputType="numberDecimal|text" />
+          
+					 <TextView
+                  style="@style/listviewContentTitles.values"
+                    android:layout_below="@id/tankowania_ilosc_wlanych_litrow"
+                   android:layout_toRightOf="@id/tankowania_cena_za_litr" 
+                   android:textSize="12sp"
+                   android:layout_marginLeft="1dip"
+                    android:layout_alignBaseline="@+id/tankowania_cena_za_litr"
+                   android:text="[zł]"/>
+                
+                
+                
+
+                <TextView
+                    android:id="@+id/koszt_tankowania_title"
+                    android:layout_below="@id/tankowania_cena_za_litr"
+                    android:layout_alignBaseline="@+id/tankowania_koszt_tankowania"
+                     style="@style/listviewContentTitles.padding5dip"
+                    android:text="Koszt tankowania"/>
+
+                <EditText
+                    style="@style/edittext"
+                     android:layout_below="@id/tankowania_cena_za_litr"
+                     android:layout_width="180dip"
+                      android:layout_alignRight="@id/tankowania_przebieg"
+                      android:layout_toRightOf="@id/koszt_tankowania_title"
+                    android:id="@+id/tankowania_koszt_tankowania"
+                    android:inputType="numberDecimal|text" />
+            
+			 <TextView
+                  style="@style/listviewContentTitles.values"
+                    android:layout_below="@id/tankowania_cena_za_litr"
+                   android:layout_toRightOf="@id/tankowania_koszt_tankowania" 
+                   android:textSize="12sp"
+                   android:layout_marginLeft="1dip"
+                    android:layout_alignBaseline="@+id/tankowania_koszt_tankowania"
+                   android:text="[zł]"/>
+          
+
+         
+
+             
+
+            
+            
+           
+            
+          
+
+                <TextView
+                    android:id="@+id/samochod_title"
+                    android:layout_below="@id/tankowania_koszt_tankowania"
+                     style="@style/listviewContentTitles.padding5dip"
+                     android:layout_alignBaseline="@+id/tankowania_samochod"
+                     
+                    android:text="Samochód" />
+
+                <Spinner
+                    android:layout_toRightOf="@id/samochod_title"
+                    android:layout_below="@id/tankowania_koszt_tankowania"
+                    android:id="@+id/tankowania_samochod"
+                    android:layout_alignRight="@id/tankowania_przebieg"
+                    android:layout_alignLeft="@id/tankowania_przebieg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+           
+
+            
+             
+            
+          
+
+                <TextView
+                    android:id="@+id/paliwo_title"
+                    android:layout_below="@id/tankowania_samochod"
+                     style="@style/listviewContentTitles.padding5dip"
+                     android:layout_alignBaseline="@+id/tankowania_paliwo"
+                    android:text="Paliwo" />
+
+                <Spinner
+                    android:id="@+id/tankowania_paliwo"
+                    android:layout_alignRight="@id/tankowania_przebieg"
+                    android:layout_alignLeft="@id/tankowania_przebieg"
+                    android:layout_toRightOf="@id/paliwo_title"
+                    android:layout_below="@id/tankowania_samochod"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+           
+
+        
+            
+            
+           
+
+                <TextView
+                    android:id="@+id/data_title"
+                    android:layout_below="@id/tankowania_paliwo"
+                    android:layout_alignBaseline="@+id/tankowania_button_data"
+                     style="@style/listviewContentTitles.padding5dip"
+                    android:text="Data" />
+
+                <Button
+                    android:id="@+id/tankowania_button_data"
+                    android:layout_below="@id/tankowania_paliwo"
+                    android:layout_toRightOf="@id/data_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:layout_alignRight="@id/tankowania_przebieg"
+                    android:layout_alignLeft="@id/tankowania_przebieg"
+                     />
+            
+            
+            
+            
+           
+            
+            
+            
+
+                <TextView
+                    android:id="@+id/czas_title"
+                    android:layout_below="@id/tankowania_button_data"
+                    android:layout_alignBaseline="@+id/tankowania_button_czas"
+                     style="@style/listviewContentTitles.padding5dip"
+                    android:text="Czas"/>
+
+                <Button
+                    android:id="@+id/tankowania_button_czas"
+                    android:layout_below="@id/tankowania_button_data"
+                    android:layout_toRightOf="@id/czas_title"
+                    android:layout_alignRight="@id/tankowania_przebieg"
+                    android:layout_alignLeft="@id/tankowania_przebieg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+           
+
+
+                <TextView
+                    android:id="@+id/stacja_title"
+                    android:layout_below="@id/tankowania_button_czas"
+                    android:layout_alignBaseline="@+id/tankowania_stacja"
+                     style="@style/listviewContentTitles.padding5dip"
+                    android:text="Stacja"/>
+
+                <EditText
+                     android:layout_below="@id/tankowania_button_czas"
+                    style="@style/edittext"
+                    android:layout_alignLeft="@id/tankowania_przebieg"
+                    android:layout_toRightOf="@id/stacja_title"
+                    android:id="@+id/tankowania_stacja"
+                    android:inputType="text" />
+            
+
+           
+           
+
+                <TextView
+                    android:id="@+id/notatki_title"
+                    android:layout_below="@id/tankowania_stacja"
+                    android:layout_alignBaseline="@+id/tankowania_notatki"
+                     style="@style/listviewContentTitles.padding5dip"
+                    android:text="Notatki" />
+
+                <EditText
+                    style="@style/edittext"
+                    android:layout_height="80dip"
+                    android:layout_below="@id/tankowania_stacja"
+                     android:layout_alignLeft="@id/tankowania_przebieg"
+                     android:layout_toRightOf="@id/notatki_title"
+                    android:id="@+id/tankowania_notatki"
+                   
+                    android:inputType="textMultiLine" />
+            
+
+           
+         
+
+            
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

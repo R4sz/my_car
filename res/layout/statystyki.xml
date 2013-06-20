@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/statystyki_header"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip" >
+
+        <View
+            android:id="@+id/statystyki_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/samochody_label"
+            style="@style/detailsHeader"
+            android:text="Statystyki" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/statystyki_header" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/statystyki_header" >
+
+            <TextView
+                android:id="@+id/statystyki_ogolne_title"
+                style="@style/listviewContentTitles"
+                android:layout_centerHorizontal="true"
+                android:text="Ogólne" />
+
+            <View
+                android:id="@+id/separator01"
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:layout_below="@id/statystyki_ogolne_title"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="3dip"
+                android:background="@color/blue" />
+
+            <TextView
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/separator01"
+                android:text="Całkowite Koszta Samochodu:" />
+
+            <TextView
+                android:id="@+id/general_cost"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/separator01"
+                android:layout_toLeftOf="@+id/jednostka_zl1"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl1"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/separator01"
+                android:text="zł" />
+
+            <TextView
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/general_cost"
+                android:text="Koszt/Dzień:" />
+
+            <TextView
+                android:id="@+id/cost_per_day"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/general_cost"
+                android:layout_toLeftOf="@+id/jednostka_zl2"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl2"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/general_cost"
+                android:text="zł" />
+
+            <TextView
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/cost_per_day"
+                android:text="Koszt/Km:" />
+
+            <TextView
+                android:id="@+id/cost_per_km"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/cost_per_day"
+                android:layout_toLeftOf="@+id/jednostka_zl3"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl3"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/cost_per_day"
+                android:text="zł" />
+
+            <TextView
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/cost_per_km"
+                android:layout_marginTop="25dip"
+                android:text="Koszt Zakupu Samochodu:" />
+
+            <TextView
+                android:id="@+id/pucharse_cost"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/cost_per_km"
+                android:layout_marginTop="25dip"
+                android:layout_toLeftOf="@+id/jednostka_zl4"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl4"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/cost_per_km"
+                android:layout_marginTop="25dip"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/from_pucharse_cost_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/pucharse_cost"
+                android:text="Całkowity Koszt\n(Od Zakupu Samochodu):" />
+
+            <TextView
+                android:id="@+id/from_pucharse_cost"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/pucharse_cost"
+                android:layout_toLeftOf="@+id/jednostka_zl5"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl5"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/pucharse_cost"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/from_pucharse_cost_per_day_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/from_pucharse_cost_title"
+                android:text="Całkowity Koszt/Dzień\n(Od Zakupu Samochodu):" />
+
+            <TextView
+                android:id="@+id/from_pucharse_cost_per_day"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/from_pucharse_cost_title"
+                android:layout_toLeftOf="@+id/jednostka_zl6"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl6"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/from_pucharse_cost_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/from_pucharse_cost_per_km_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/from_pucharse_cost_per_day_title"
+                android:text="Całkowity Koszt/Km\n(Od Zakupu Samochodu):" />
+
+            <TextView
+                android:id="@+id/from_pucharse_cost_per_km"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/from_pucharse_cost_per_day_title"
+                android:layout_toLeftOf="@+id/jednostka_zl7"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_zl7"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/from_pucharse_cost_per_day_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/distance_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/from_pucharse_cost_per_km_title"
+                android:layout_marginTop="25dip"
+                android:text="Całkowity dystants:" />
+
+            <TextView
+                android:id="@+id/distance"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/from_pucharse_cost_per_km_title"
+                android:layout_marginTop="25dip"
+                android:layout_toLeftOf="@+id/jednostka_km1"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_km1"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/from_pucharse_cost_per_km_title"
+                android:layout_marginTop="25dip"
+                android:text="km" />
+
+            <TextView
+                android:id="@+id/total_time_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/distance"
+                android:text="Całkowity Czas:" />
+
+            <TextView
+                android:id="@+id/total_time"
+                style="@style/listviewContentTitles.values.padding6dip.bold"    
+                android:layout_below="@id/distance"
+                android:text="999,99" 
+                android:layout_toLeftOf="@+id/jednostka_dni"/>
+            
+            <TextView
+                android:id="@+id/jednostka_dni"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/distance"
+                android:text="dni" />
+
+            <TextView
+                android:id="@+id/statystyki_fills_title"
+                style="@style/listviewContentTitles"
+                android:layout_below="@id/total_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dip"
+                android:text="Tankowania" />
+
+            <View
+                android:id="@+id/separator02"
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:layout_below="@id/statystyki_fills_title"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="3dip"
+                android:background="@color/blue" />
+
+            <TextView
+                android:id="@+id/average_consumption_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/separator02"
+                android:text="Średnie Spalanie:" />
+
+            <TextView
+                android:id="@+id/average_consumption"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/separator02"
+                android:layout_toLeftOf="@+id/jednostka_L"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/separator02"
+                android:text="L/100" />
+
+            <TextView
+                android:id="@+id/last_average_consumption_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/average_consumption"
+                android:text="Ostatnie Spalanie:" />
+
+            <TextView
+                android:id="@+id/last_average_consumption"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/average_consumption"
+                android:layout_toLeftOf="@+id/jednostka_L2"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L2"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/average_consumption"
+                android:text="L/100" />
+
+            <TextView
+                android:id="@+id/min_average_consumption_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/last_average_consumption"
+                android:text="Min. Spalanie:" />
+
+            <TextView
+                android:id="@+id/min_average_consumption"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/last_average_consumption"
+                android:layout_toLeftOf="@+id/jednostka_L3"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L3"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/last_average_consumption"
+                android:text="L/100" />
+
+            <TextView
+                android:id="@+id/max_average_consumption_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/min_average_consumption"
+                android:text="Max. Spalanie:" />
+
+            <TextView
+                android:id="@+id/max_average_consumption"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/min_average_consumption"
+                android:layout_toLeftOf="@+id/jednostka_L4"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L4"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/min_average_consumption"
+                android:text="L/100" />
+
+            <TextView
+                android:id="@+id/average_zl_per_liter_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/max_average_consumption_title"
+                android:layout_marginTop="25dip"
+                android:text="Średnia cena zł/L" />
+
+            <TextView
+                android:id="@+id/average_zl_per_liter"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/max_average_consumption_title"
+                android:layout_marginTop="25dip"
+                android:layout_toLeftOf="@+id/jednostka_L5"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L5"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/max_average_consumption_title"
+                android:layout_marginTop="25dip"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/last_zl_per_liter_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/average_zl_per_liter_title"
+                android:text="Ost. Cena zł/L" />
+
+            <TextView
+                android:id="@+id/last_zl_per_liter"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/average_zl_per_liter_title"
+                android:layout_toLeftOf="@+id/jednostka_L6"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L6"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/average_zl_per_liter_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/min_zl_per_liter_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/last_zl_per_liter_title"
+                android:text="Min. Cena zł/L" />
+
+            <TextView
+                android:id="@+id/min_zl_per_liter"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/last_zl_per_liter_title"
+                android:layout_toLeftOf="@+id/jednostka_L7"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L7"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/last_zl_per_liter_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/max_zl_per_liter_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/min_zl_per_liter_title"
+                android:text="Max. Cena zł/L" />
+
+            <TextView
+                android:id="@+id/max_zl_per_liter"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/min_zl_per_liter_title"
+                android:layout_toLeftOf="@+id/jednostka_L8"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L8"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/min_zl_per_liter_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/avg_zl_per_km_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/max_zl_per_liter_title"
+                android:layout_marginTop="25dip"
+                android:text="zł/Km" />
+
+            <TextView
+                android:id="@+id/avg_zl_per_km"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/max_zl_per_liter_title"
+                android:layout_marginTop="25dip"
+                android:layout_toLeftOf="@+id/jednostka_L9"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L9"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/max_zl_per_liter_title"
+                android:layout_marginTop="25dip"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/avg_zl_per_day_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_zl_per_km_title"
+                android:text="zł/Dzień" />
+
+            <TextView
+                android:id="@+id/avg_zl_per_day"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_zl_per_km_title"
+                android:layout_toLeftOf="@+id/jednostka_L9"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L9"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/avg_zl_per_km_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/avg_zl_per_fill_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_zl_per_day_title"
+                android:text="zł/Tankowanie" />
+
+            <TextView
+                android:id="@+id/avg_zl_per_fill"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_zl_per_day_title"
+                android:layout_toLeftOf="@+id/jednostka_L9"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L9"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/avg_zl_per_day_title"
+                android:text="zł" />
+
+            <TextView
+                android:id="@+id/avg_km_per_zl_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_zl_per_fill_title"
+                android:text="Km/zł" />
+
+            <TextView
+                android:id="@+id/avg_km_per_zl"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_zl_per_fill_title"
+                android:layout_toLeftOf="@+id/jednostka_L10"
+                android:text="999,99" />
+
+            <TextView
+                android:id="@+id/jednostka_L10"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/avg_zl_per_fill_title"
+                android:text="km" />
+            
+            
+            
+            
+             <TextView
+                android:layout_marginTop="25dip"
+                android:id="@+id/avg_Liter_per_fill_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_km_per_zl_title"
+                android:text="L/tankowanie" />
+
+            <TextView
+                android:layout_marginTop="25dip"
+                android:id="@+id/avg_Liter_per_fill"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_km_per_zl_title"
+                android:layout_toLeftOf="@+id/jednostka_L11"
+                android:text="999,99" />
+
+            <TextView
+                android:layout_marginTop="25dip"
+                android:id="@+id/jednostka_L11"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/avg_km_per_zl_title"
+                android:text="L" />
+            
+            
+            
+            
+            
+            
+            <TextView
+               
+                android:id="@+id/avg_Day_per_fill_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_Liter_per_fill_title"
+                android:text="Dni/tankowanie" />
+
+            <TextView
+                
+                android:id="@+id/avg_Day_per_fill"
+                 android:layout_alignParentRight="true"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_Liter_per_fill_title"
+          
+                android:text="999,99" />
+
+           
+            
+             <TextView
+         
+                android:id="@+id/avg_Km_per_fill_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_Day_per_fill_title"
+                android:text="Km/tankowanie" />
+
+            <TextView
+              
+                android:id="@+id/avg_Km_per_fill"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_Day_per_fill_title"
+                android:layout_toLeftOf="@+id/jednostka_L12"
+                android:text="999,99" />
+
+            <TextView
+               
+                android:id="@+id/jednostka_L12"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/avg_Day_per_fill_title"
+                android:text="km" />
+            
+            
+            
+            
+            
+             <TextView
+         		 android:layout_marginTop="25dip"
+                android:id="@+id/total_liters_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/avg_Km_per_fill_title"
+                android:text="Litrów Łącznie:" />
+
+            <TextView
+               android:layout_marginTop="25dip"
+                android:id="@+id/total_liters"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/avg_Km_per_fill_title"
+                android:layout_toLeftOf="@+id/jednostka_L13"
+                android:text="999,99" />
+            <TextView
+                android:layout_marginTop="25dip"
+                android:id="@+id/jednostka_L13"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/avg_Km_per_fill_title"
+                android:text="L" />
+                                                                    
+            
+             <TextView
+            	
+                android:id="@+id/total_zl_title"
+                style="@style/listviewContentTitles.values.padding6dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/total_liters_title"
+                android:text="Zł Łącznie:" />
+
+            <TextView
+             
+                android:id="@+id/total_zl"
+                style="@style/listviewContentTitles.values.padding6dip.bold"
+                android:layout_below="@id/total_liters_title"
+                android:layout_toLeftOf="@+id/jednostka_L14"
+                android:text="999,99" />
+            <TextView
+             
+                android:id="@+id/jednostka_L14"
+                style="@style/listviewContentTitles.values.unit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/total_liters_title"
+                android:text="zł" />
+            
+            
+            
+            
+            
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

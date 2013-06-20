@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/maint_header"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip" >
+
+        <View
+            android:id="@+id/maint_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/maint_label"
+            style="@style/detailsHeader"
+            android:text="Dodaj Wydatek..." />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/save_icon"
+            android:onClick="saveNewMaint" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/przebieg_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_przebieg"
+        android:layout_below="@id/maint_header"
+        android:text="Przebieg" />
+
+    <EditText
+        android:id="@+id/maintance_przebieg"
+        style="@style/edittext"
+        android:layout_below="@id/maint_header"
+        android:layout_marginLeft="28dip"
+        android:layout_toRightOf="@id/przebieg_title"
+        android:inputType="numberDecimal|text" >
+    </EditText>
+
+    <TextView
+        style="@style/listviewContentTitles.values"
+        android:layout_alignBaseline="@id/maintance_przebieg"
+        android:layout_below="@id/maint_header"
+        android:layout_marginRight="1dip"
+        android:layout_toRightOf="@id/maintance_przebieg"
+        android:text="[km]"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/koszt_calkowity_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_koszt"
+        android:layout_below="@id/maintance_przebieg"
+        android:singleLine="false"
+        android:text="Koszt Całkowity" />
+
+    <EditText
+        android:id="@+id/maintance_koszt"
+        style="@style/edittext"
+        android:layout_alignRight="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_przebieg"
+        android:layout_toRightOf="@id/koszt_calkowity_title"
+        android:inputType="numberDecimal|text" />
+
+    <TextView
+        style="@style/listviewContentTitles.values"
+        android:layout_alignBaseline="@id/maintance_koszt"
+        android:layout_below="@id/maintance_przebieg"
+        android:layout_marginLeft="1dip"
+        android:layout_toRightOf="@id/maintance_koszt"
+        android:text="[zł]"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/samochod_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_samochod"
+        android:layout_below="@id/maintance_koszt"
+        android:text="Samochód" />
+
+    <Spinner
+        android:id="@+id/maintance_samochod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/maintance_koszt"
+        android:layout_alignRight="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_koszt"
+        android:layout_toRightOf="@id/samochod_title" />
+
+    <TextView
+        android:id="@+id/wydatek_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_maintanced"
+        android:layout_below="@id/maintance_samochod"
+        android:text="Wydatek" />
+
+    <Spinner
+        android:id="@+id/maintance_maintanced"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/maintance_koszt"
+        android:layout_alignRight="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_samochod"
+        android:layout_toRightOf="@id/wydatek_title" />
+
+    <TextView
+        android:id="@+id/data_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_button_data"
+        android:layout_below="@id/maintance_maintanced"
+        android:text="Data" />
+
+    <Button
+        android:id="@+id/maintance_button_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/maintance_koszt"
+        android:layout_alignRight="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_maintanced"
+        android:layout_toRightOf="@id/data_title" />
+
+    <TextView
+        android:id="@+id/czas_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_button_czas"
+        android:layout_below="@id/maintance_button_data"
+        android:text="Czas" />
+
+    <Button
+        android:id="@+id/maintance_button_czas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/maintance_koszt"
+        android:layout_alignRight="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_button_data"
+        android:layout_toRightOf="@id/czas_title" />
+
+    <TextView
+        android:id="@+id/miejsce_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_place"
+        android:layout_below="@id/maintance_button_czas"
+        android:text="Miejsce" />
+
+    <EditText
+        android:id="@+id/maintance_place"
+        style="@style/edittext"
+        android:layout_alignLeft="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_button_czas"
+        android:layout_toRightOf="@id/miejsce_title"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/notatki_title"
+        style="@style/listviewContentTitles.padding5dip"
+        android:layout_alignBaseline="@+id/maintance_notatki"
+        android:layout_below="@id/maintance_place"
+        android:text="Notatki" />
+
+    <EditText
+        android:id="@+id/maintance_notatki"
+        style="@style/edittext"
+        android:layout_height="80dip"
+        android:layout_alignLeft="@id/maintance_przebieg"
+        android:layout_below="@id/maintance_place"
+        android:layout_toRightOf="@id/notatki_title"
+        android:inputType="textMultiLine" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/maintance_notatki"
+        android:layout_marginTop="5dip"
+        android:background="#FF909090" />
+
+</RelativeLayout>

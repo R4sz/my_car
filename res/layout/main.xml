@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+  
+    
+        <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/service_details_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:id="@+id/service_details_button_cancel"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/serv_label"
+            style="@style/detailsHeader"
+            android:text="My_Car" />
+
+        <Button
+            android:id="@+id/main_car_add_button"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dip"
+            android:onClick="carAddButton"
+            android:background="@drawable/car_add_icon2" />
+
+        <View
+            android:id="@+id/serv_separator00"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/service_details_header_view"
+            android:layout_marginBottom="6dip"
+            android:background="#d3d3d3" />
+   </RelativeLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <TableRow
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="15dip" >
+
+        <Button
+            android:id="@+id/przycisk_samochody"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="1"
+            android:background="@drawable/car_icon" />
+
+        <Button
+            android:id="@+id/przycisk_tankowanie"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/gas_icon" />
+
+        <Button
+            android:id="@+id/przycisk_naprawy_koszta"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/repair_icon" />
+    </TableRow>
+
+    <TableRow
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:text="Przeglądaj Samochody"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginLeft="12dip"
+            android:layout_weight="1"
+            android:text="Dodaj Tankowanie"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:text="Dodaj Naprawę"
+            android:textColor="#000000"
+            android:gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="25dip" >
+
+
+        <Button
+            android:id="@+id/przycisk_wydatki"
+              android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/expenses_icon" />
+
+        
+         <Button
+            android:id="@+id/przycisk_lista_tankowan"
+             android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/gas_list_icon" />
+        
+        
+        <Button
+            android:id="@+id/przycisk_serwisy_lista"
+           android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/repair_list_icon" />
+    </TableRow>
+    
+    
+    
+     <TableRow
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+         android:paddingTop="2dip" >
+
+        <TextView
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:text="Dodaj Wydatek"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginLeft="12dip"
+            android:layout_weight="1"
+            android:text="Przeglądaj Tankowania"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:text="Przeglądaj Naprawy"
+            android:textColor="#000000"
+            android:gravity="center" />
+    </TableRow>
+    
+    
+    
+    
+
+    <TableRow
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="25dip" >
+
+        <Button
+            android:id="@+id/przycisk_maintance_list"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/expenses_list_icon"
+            />
+
+        <Button
+            android:id="@+id/przycisk_statystyki"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/stats_icon" />
+
+        <Button
+            android:id="@+id/przycisk_wyjscie"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/exit_icon" />
+    </TableRow>
+
+    <TableRow
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+         android:paddingTop="2dip" >
+
+        <TextView
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:text="Przeglądaj Wydatki"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginLeft="17dip"
+            android:layout_weight="1"
+            android:text="Statystyki"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginLeft="14dip"
+            android:layout_weight="1"
+            android:text="Wyjście"
+            android:textColor="#000000"
+            android:gravity="center" />
+    </TableRow>	    
+    
+</TableLayout>

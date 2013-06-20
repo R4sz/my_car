@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/service_details_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:id="@+id/service_details_button_cancel"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/serv_label"
+            style="@style/detailsHeader"
+            android:text="Szczegóły Serwisu" />
+
+        <Button
+            android:id="@+id/serv_edit_button"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dip"
+            android:onClick="editButton"
+            android:background="@drawable/edit_icon" />
+
+        <View
+            android:id="@+id/serv_separator00"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/service_details_header_view"
+            android:layout_marginBottom="6dip"
+            android:background="#d3d3d3" />
+   
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_car_name_title"
+            android:layout_below="@id/serv_separator00"
+            android:text="Nazwa Samochodu" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_car_name"
+            android:layout_below="@id/serv_separator00"
+            android:layout_toRightOf="@id/service_car_name_title"
+            android:layout_alignTop="@id/service_car_name_title"
+            android:text="Przykładowa nazwa " />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_Przebieg_title"
+            android:layout_below="@id/service_car_name_title"
+            android:text="Przebieg"/>
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_Przebieg1"
+            android:layout_alignLeft="@id/service_car_name"
+            android:layout_below="@id/service_car_name_title"
+            android:layout_toRightOf="@id/service_Przebieg_title"
+            android:layout_alignTop="@id/service_Przebieg_title"
+            android:text="Przebieg" />
+
+        <TextView
+           	style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_below="@id/service_car_name"
+            android:layout_toRightOf="@id/service_Przebieg1"
+             android:layout_alignTop="@id/service_Przebieg_title"
+            android:text="[km]"/>
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_costt_title"
+            android:layout_below="@id/service_Przebieg_title"
+            android:text="Koszt: " />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_costt"
+            android:layout_alignLeft="@id/service_car_name"
+            android:layout_alignTop="@id/service_costt_title"
+            android:layout_below="@id/service_Przebieg_title"
+            android:text="0.00"/>
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_below="@id/service_Przebieg_title"   
+            android:layout_toRightOf="@id/service_costt"
+           	android:layout_alignTop="@id/service_costt_title"
+            android:text="[zł]" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_serwisowano_title"
+            android:layout_below="@id/service_costt_title"
+            android:text="Serwisowano" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_serwisowano"
+            android:layout_alignLeft="@id/service_car_name"
+            android:layout_alignTop="@id/service_serwisowano_title"
+            android:layout_below="@id/service_costt"
+            android:layout_toRightOf="@id/service_serwisowano_title" />
+
+        <View
+            android:id="@+id/service_separator01"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/service_serwisowano_title"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_date_title"
+            android:layout_below="@id/service_separator01"
+            android:text="Data:" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_date"
+            android:layout_alignLeft="@id/service_car_name"
+            android:layout_alignTop="@id/service_date_title" 
+            android:layout_below="@id/service_separator01"
+            android:layout_toRightOf="@id/service_date_title" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_time_title"
+            android:layout_below="@id/service_date_title"
+            android:text="Godzina:" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_time"
+            android:layout_alignLeft="@id/service_car_name"
+            android:layout_alignTop="@id/service_time_title"
+            android:layout_below="@id/service_date"
+            android:layout_toRightOf="@id/service_time_title"/>
+
+        <View
+            android:id="@+id/service_separator02"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/service_time_title"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_place_title"
+            android:layout_below="@id/service_separator02"
+            android:text="Miejsce:"/>
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_place"
+            android:layout_alignLeft="@id/service_car_name"
+            android:layout_alignTop="@id/service_place_title"
+            android:layout_below="@id/service_separator02"
+            android:layout_toRightOf="@id/service_place_title" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/service_notes_title"
+            android:layout_below="@id/service_place_title"
+            android:text="Notatki:"/>
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/service_notes"
+            android:layout_alignLeft="@id/service_car_name"
+         	android:layout_alignTop="@id/service_notes_title"
+            android:layout_below="@id/service_place"
+            android:layout_toRightOf="@id/service_notes_title" />
+    </RelativeLayout>
+
+</ScrollView>

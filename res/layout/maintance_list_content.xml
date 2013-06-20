@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10sp"
+    android:paddingRight="10sp"
+    android:paddingTop="2sp" >
+
+    <RelativeLayout
+        android:id="@+id/LinearLayout_maint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/maint_list_przebieg"
+            style="@style/listviewContentTitles"
+            android:text="Przebieg: " >
+        </TextView>
+
+        <TextView
+            android:id="@+id/maintance_list_mileage"
+            style="@style/listviewContentTitles.values"
+            android:layout_toRightOf="@+id/maint_list_przebieg" >
+        </TextView>
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_toRightOf="@+id/maintance_list_mileage"
+            android:text=" [km]" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/maintance_list_car_name"
+            style="@style/listviewContentTitles.values"
+            android:layout_alignParentRight="true"
+            android:text="nazwa" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/maint_list_maintanced_title"
+            style="@style/listviewContentTitles"
+            android:layout_below="@id/maint_list_przebieg"
+            android:text="Wydatek: " >
+        </TextView>
+
+        <TextView
+            android:id="@+id/maint_list_maintanced"
+            style="@style/listviewContentTitles.values"
+            android:layout_below="@id/maint_list_przebieg"
+            android:layout_toRightOf="@id/maint_list_maintanced_title" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/maint_list_koszt"
+            style="@style/listviewContentTitles"
+            android:layout_below="@id/maint_list_maintanced_title"
+            android:text="Koszt: " >
+        </TextView>
+
+        <TextView
+            android:id="@+id/maintance_list_cost"
+            style="@style/listviewContentTitles.values"
+            android:layout_below="@id/maint_list_maintanced_title"
+            android:layout_toRightOf="@id/maint_list_koszt" >
+        </TextView>
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_below="@id/maint_list_maintanced_title"
+            android:layout_toRightOf="@+id/maintance_list_cost"
+            android:text=" [zł]" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/MaintDate"
+            style="@style/listviewContentTitles.values"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/maint_list_maintanced_title" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

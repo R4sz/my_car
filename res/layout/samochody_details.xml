@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/samochody_details_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:id="@+id/samochody_details_button_back"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/detailsHeader"
+            android:text="Szczegóły Samochodu" />
+
+        <Button
+            android:id="@+id/car_edit_button"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/edit_icon" />
+
+        <View
+            android:id="@+id/separator00"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/samochody_details_header_view"
+            android:layout_marginBottom="6dip"
+            android:background="#d3d3d3" />
+
+        <ToggleButton
+            android:id="@+id/sam_aktywny"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator00"
+            android:textOff="Ten samochód jest nieaktywny"
+            android:textOn="Ten samochód jest aktywny" />
+
+        <TextView
+            android:id="@+id/car_name_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@id/sam_aktywny"
+            android:text="Nazwa Samochodu" />
+
+        <TextView
+            android:id="@+id/car_details_name"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_below="@id/sam_aktywny"
+            android:layout_toRightOf="@id/car_name_title"
+            android:text="Przykładowa nazwa " />
+
+        <TextView
+            android:id="@+id/car_mark_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@id/car_name_title"
+            android:text="Marka" />
+
+        <TextView
+            android:id="@+id/car_mark"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_details_name"
+            android:layout_toRightOf="@id/car_mark"
+            android:text="b/d" />
+
+        <TextView
+            android:id="@+id/car_model_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@id/car_mark_title"
+            android:text="Model" />
+
+        <TextView
+            android:id="@+id/car_model"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_mark"
+            android:layout_toRightOf="@id/car_model_title"
+            android:text="b/d" />
+
+        <TextView
+            android:id="@+id/rok_produkcji_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@+id/car_model_title"
+            android:text="Rok Produkcji" />
+
+        <TextView
+            android:id="@+id/rok_produkcji"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_model_title"
+            android:layout_toRightOf="@id/rok_produkcji_title"
+            android:text="b/d" />
+
+        <TextView
+            android:id="@+id/car_details_przebieg_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@+id/rok_produkcji_title"
+            android:text="Przebieg" />
+
+        <TextView
+            android:id="@+id/car_details_przebieg"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/rok_produkcji_title"
+            android:layout_toRightOf="@id/car_details_przebieg_title"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_below="@id/rok_produkcji_title"
+            android:layout_toRightOf="@id/car_details_przebieg"
+            android:paddingTop="6dip"
+            android:text="[km]" />
+
+        <View
+            android:id="@+id/separator01"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/car_details_przebieg"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/car_details_pojemnosc_silnika_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@+id/separator01"
+            android:text="Pojemność Silnika" />
+
+        <TextView
+            android:id="@+id/car_details_pojemnosc_silnika"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/separator01"
+            android:layout_toRightOf="@id/car_details_pojemnosc_silnika_title"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_below="@id/separator01"
+            android:layout_toRightOf="@id/car_details_pojemnosc_silnika"
+            android:paddingTop="6dip"
+            android:text="[cm3]" />
+
+        <TextView
+            android:id="@+id/car_details_paliwo_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@+id/car_details_pojemnosc_silnika_title"
+            android:text="Paliwo" />
+
+        <TextView
+            android:id="@+id/car_details_paliwo"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_details_pojemnosc_silnika"
+            android:layout_toRightOf="@id/car_details_paliwo_title"
+            android:text="b/d" />
+
+        <TextView
+            android:id="@+id/car_details_symbol_silnika_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@+id/car_details_paliwo_title"
+            android:text="Symbol Silnika" />
+
+        <TextView
+            android:id="@+id/car_details_symbol_silnika"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_details_paliwo"
+            android:layout_toRightOf="@id/car_details_symbol_silnika_title"
+            android:text="b/d" />
+
+        <TextView
+            android:id="@+id/car_details_vin_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@+id/car_details_symbol_silnika_title"
+            android:text="Vin" />
+
+        <TextView
+            android:id="@+id/car_details_vin"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_details_symbol_silnika_title"
+            android:layout_toRightOf="@id/car_details_vin_title"
+            android:text="b/d" />
+
+        <View
+            android:id="@+id/separator02"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/car_details_vin"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/car_details_pucharse_date_ttile"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@id/separator02"
+            android:text="Data Zakupu:" />
+
+        <TextView
+            android:id="@+id/car_details_pucharse_date"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/separator02"
+            android:layout_toRightOf="@id/car_details_pucharse_date_ttile"
+            android:text="b/d" />
+
+        <TextView
+            android:id="@+id/car_details_pucharse_price_ttile"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_below="@id/car_details_pucharse_date_ttile"
+            android:text="Cena Zakupu:" />
+
+        <TextView
+            android:id="@+id/car_details_pucharse_price"
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignLeft="@id/car_details_name"
+            android:layout_below="@id/car_details_pucharse_date_ttile"
+            android:layout_toRightOf="@id/car_details_pucharse_price_ttile"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_below="@id/car_details_pucharse_date_ttile"
+            android:layout_toRightOf="@id/car_details_pucharse_price"
+            android:paddingTop="6dip"
+            android:text="[zł]" />
+
+        <View
+            android:id="@+id/separator03"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/car_details_pucharse_price_ttile"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+    </RelativeLayout>
+
+</ScrollView>

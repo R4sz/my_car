@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/samochody_header"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip" >
+
+        <View
+            android:id="@+id/samochody_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/samochody_label"
+            style="@style/detailsHeader"
+            android:text="Dodaj Samochód..." />
+
+        <Button
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/save_icon"
+            android:onClick="saveNewCar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/samochody_header"
+        android:layout_marginLeft="5dip" >
+
+        <TextView
+            android:id="@+id/samochody_testbazy"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_nazwa"
+            android:layout_below="@id/samochody_header"
+            android:text="@string/etykieta_samochody_nazwa" />
+
+        <EditText
+            android:id="@+id/samochody_nazwa"
+            style="@style/edittext"
+            android:layout_below="@id/samochody_header"
+            android:layout_marginLeft="35dip"
+            android:layout_toRightOf="@id/samochody_testbazy"
+            android:hint="@string/etykieta_samochody_nazwa"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/samochody_marka_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_marka"
+            android:layout_below="@+id/samochody_testbazy"
+            android:text="@string/etykieta_samochody_marka" />
+
+        <EditText
+            android:id="@+id/samochody_marka"
+            style="@style/edittext"
+            android:layout_alignLeft="@id/samochody_nazwa"
+            android:layout_below="@id/samochody_testbazy"
+            android:layout_marginTop="10dip"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/samochody_model_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_model"
+            android:layout_below="@id/samochody_marka"
+            android:text="@string/etykieta_samochody_model" />
+
+        <EditText
+            android:id="@+id/samochody_model"
+            style="@style/edittext"
+            android:layout_alignLeft="@id/samochody_nazwa"
+            android:layout_below="@id/samochody_marka"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/samochody_rok_produkcji_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_rok_produkcji"
+            android:layout_below="@id/samochody_model_title"
+            android:text="@string/etykieta_samochody_rok_produkcji" />
+
+        <EditText
+            android:id="@+id/samochody_rok_produkcji"
+            style="@style/edittext"
+            android:layout_width="100dip"
+            android:layout_alignRight="@id/samochody_nazwa"
+            android:layout_below="@id/samochody_model"
+            android:layout_marginLeft="70dip"
+            android:layout_toRightOf="@id/samochody_rok_produkcji_title"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/samochody_przebieg_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_aktualny_przebieg"
+            android:layout_below="@id/samochody_rok_produkcji"
+            android:text="@string/etykieta_samochody_aktualny_przebieg" />
+
+        <EditText
+            android:id="@+id/samochody_aktualny_przebieg"
+            style="@style/edittext"
+            android:layout_width="100dip"
+            android:layout_alignRight="@id/samochody_nazwa"
+            android:layout_below="@id/samochody_rok_produkcji"
+            android:inputType="numberDecimal|text" />
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_alignBaseline="@+id/samochody_aktualny_przebieg"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/samochody_rok_produkcji"
+            android:text="[km]"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/samochody_poj_silnika_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_pojemnosc_silnika"
+            android:layout_below="@id/samochody_aktualny_przebieg"
+            android:text="@string/etykieta_samochody_pojemnosc_silnika" />
+
+        <EditText
+            android:id="@+id/samochody_pojemnosc_silnika"
+            style="@style/edittext"
+            android:layout_width="100dip"
+            android:layout_alignRight="@id/samochody_nazwa"
+            android:layout_below="@id/samochody_aktualny_przebieg"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_alignBaseline="@+id/samochody_pojemnosc_silnika"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/samochody_aktualny_przebieg"
+            android:text="[cm3]"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/samochody_paliwo_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/paliwo"
+            android:layout_below="@id/samochody_pojemnosc_silnika"
+            android:text="@string/etykieta_samochody_paliwo" />
+
+        <Spinner
+            android:id="@+id/paliwo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/samochody_nazwa"
+            android:layout_alignRight="@id/samochody_nazwa"
+            android:layout_below="@id/samochody_pojemnosc_silnika"
+            android:layout_toRightOf="@id/samochody_paliwo_title" />
+
+        <TextView
+            android:id="@+id/samochody_symbol_silnika_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_symbol_silnika"
+            android:layout_below="@id/paliwo"
+            android:text="@string/etykieta_samochody_symbol_silnika" />
+
+        <EditText
+            android:id="@+id/samochody_symbol_silnika"
+            style="@style/edittext"
+            android:layout_width="150dip"
+            android:layout_alignRight="@id/samochody_nazwa"
+            android:layout_below="@id/paliwo"
+            android:layout_marginLeft="50dip"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/samochody_vin_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_vin"
+            android:layout_below="@id/samochody_symbol_silnika"
+            android:text="@string/etykieta_samochody_vin" />
+
+        <EditText
+            android:id="@+id/samochody_vin"
+            style="@style/edittext"
+            android:layout_alignLeft="@id/samochody_symbol_silnika"
+              android:layout_alignRight="@id/samochody_symbol_silnika"
+            android:layout_below="@id/samochody_symbol_silnika"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/samochody_pucharse_time_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_pucharse_time"
+            android:layout_below="@id/samochody_vin"
+            android:text="Data Zakupu" />
+
+        <Button
+            android:id="@+id/samochody_pucharse_time"
+            android:onClick="setDate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_alignLeft="@id/samochody_symbol_silnika"
+              android:layout_alignRight="@id/samochody_symbol_silnika"
+            android:layout_below="@id/samochody_vin"
+            android:layout_toRightOf="@id/samochody_pucharse_time_title"
+            android:text="01.01.70" />
+
+       
+        <TextView
+            android:id="@+id/samochody_price_title"
+            style="@style/listviewContentTitles.padding5dip"
+            android:layout_alignBaseline="@+id/samochody_price"
+            android:layout_below="@id/samochody_pucharse_time"
+            android:text="Cena Zakupu:" />
+
+        <EditText
+            android:id="@+id/samochody_price"
+            style="@style/edittext"
+            android:layout_alignLeft="@id/samochody_symbol_silnika"
+             android:layout_alignRight="@id/samochody_symbol_silnika"
+            android:layout_below="@id/samochody_pucharse_time"
+            android:inputType="number" />
+        
+        
+         <TextView
+            style="@style/listviewContentTitles.values"
+            android:layout_alignBaseline="@+id/samochody_price"
+            android:layout_toRightOf="@id/samochody_price"
+            android:layout_marginLeft="3dip"
+           android:layout_below="@id/samochody_pucharse_time"
+            android:text="[zł]"
+            android:textSize="12sp" />
+        
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/samochody_price_title"
+            android:layout_marginTop="10dip"
+            android:background="#FF909090" />
+    </RelativeLayout>
+
+</RelativeLayout>

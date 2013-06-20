@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="rasz.app.My_Car"
+    android:versionCode="1"
+    android:versionName="1.0"  >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/MyCar_App" 
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        >
+        <activity
+            android:name=".Main"
+            android:label="@string/MyCar_App"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SamochodyDodaj"
+            android:label="@string/etykieta_samochody" 
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SamochodyLista"
+            android:label="@string/etykieta_samochody" >
+        </activity>
+        <activity
+            android:name=".SamochodyDetails"
+            android:label="@string/etykieta_samochody" >
+        </activity>
+        <activity
+            android:name=".SamochodyEdit"
+            android:label="@string/etykieta_samochody"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TankowaniaDodaj"
+            android:label="@string/etykieta_samochody"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TankowaniaList"
+            android:label="lista tankowan test" >
+        </activity>
+        <activity
+            android:name=".TankowaniaDetails"
+            android:label="szczegóły tankowania" >
+        </activity>
+        <activity
+            android:name=".TankowaniaEdit"
+            android:label="edycja tankowania"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ServiceDodaj"
+            android:label="Serwis"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ServiceList"
+            android:label="Lista Serwisowa" >
+        </activity>
+        <activity
+            android:name=".ServiceDetails"
+            android:label="Szczegóły Serwisu" >
+        </activity>
+        <activity
+            android:name=".ServiceEdit"
+            android:label="service edit"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WydatkiDodaj"
+            android:label="wydatki"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WydatkiList"
+            android:label="Lista Wydatków" >
+        </activity>
+        <activity
+            android:name=".WydatkiDetails"
+            android:label="Lista Wydatków" >
+        </activity>
+        <activity
+            android:name=".WydatkiEdit"
+            android:label="Edycja Wydatku"
+            android:screenOrientation="portrait" >
+        </activity>
+    	<activity
+    	    android:name=".Statystyki" 
+    	    android:label="Statystyki">
+    	</activity>
+    
+    </application>
+
+</manifest>

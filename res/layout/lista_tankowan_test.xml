@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white">
+
+      <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+      <View
+            android:id="@+id/tanklist_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:id="@+id/tank_button_cancel"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/tanklist_label"
+            style="@style/detailsHeader"
+            android:text="Lista Tankowań" />
+   </RelativeLayout>
+
+
+
+    
+
+<LinearLayout 
+            	android:id="@+id/LinearLayout0222"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:background="@color/grey">
+    <TextView 
+        android:id="@+id/testspalaniaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:padding="4dip"
+        android:textStyle="bold"
+        android:textSize="20dip" />
+    <TextView
+        android:id="@+id/spalanie_zarostek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L/100 "
+        android:textStyle="italic" />
+    <TextView 
+        android:id="@+id/CalkowiteKosztaPaliwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dip"
+        android:text="0.00"
+        android:textStyle="bold"
+        android:textSize="20dip" />
+    <TextView
+        android:id="@+id/CalkowteKosztaPaliwaZarostek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:text="zł " />
+    <TextView
+        android:id="@+id/Przejechane_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:padding="4dip"
+        android:textStyle="bold"
+        android:textSize="20dip" />
+    
+    <TextView
+        android:id="@+id/Przejechane_Header_zarostek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:text="km " />
+    
+    
+</LinearLayout>    
+    
+    
+    <ListView 
+        android:id="@+id/ListView01" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000" >        
+    </ListView>
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="MyCar_App">MyCar</string>
+    <string name="glowny_tytul">MyCar</string>
+    <string name="etykieta_samochody">Samochody</string>
+    <string name="etykieta_tankowanie">Tankowanie</string>
+    <string name="etykieta_naprawy">Naprawy</string>
+    <string name="etykieta_podroze">Pozdróże</string>
+    <string name="etykieta_statystyki">Statystyki</string>
+    <string name="etykieta_ustawienia">Ustawienia</string>
+    <string name="etykieta_pomoc">Pomoc</string>
+    <string name="etykieta_wyjscie">Wyjście</string>
+    <string name="etykieta_model">Model</string>
+    <string name="etykieta_samochody_marka">Marka</string>
+    <string name="etykieta_samochody_nazwa">Nazwa</string>
+    <string name="etykieta_samochody_model">Model</string>
+    <string name="etykieta_samochody_rok_produkcji">Rok Produkcji</string>
+    <string name="etykieta_samochody_aktualny_przebieg">Aktualny Przebieg</string>
+    <string name="etykieta_samochody_pojemnosc_silnika">Pojemność Silnika</string>
+    <string name="etykieta_samochody_paliwo">Paliwo</string>
+    <string name="etykieta_samochody_symbol_silnika">Symbol Silnika</string>
+    <string name="etykieta_samochody_vin">Vin</string>
+    <string name="etykieta_samochody_pobierz">Zaakceptuj</string>
+    <string name="button_cancel">Anuluj</string>
+    <string name="etykieta_samochody_lista_dodaj_nowy">Dodaj nowy samochód</string>
+    <string name="etykieta_samochody_lista_text_empty">Brak dodanych samochodów!</string>
+    <string name="footer"> Dla dodatkowych opcji - przytrzymaj dłużej na wyniku. </string>
+    <string name="etykieta_add_car">Dodaj Samochód</string>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#808080</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0066FF</color>
+
+    <string-array name="menu">
+        <item>Edytuj</item>
+        <item>Usuń</item>
+        <item>Dodaj</item>
+    </string-array>
+
+    <style name="detailsHeader">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">11dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    
+    
+    
+    
+    <style name="listviewContentTitles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="listviewContentTitles.values">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="listviewContentTitles.padding5dip">
+        <item name="android:padding">5dip</item>
+    </style>
+
+    <style name="listviewContentTitles.values.padding6dip">
+        <item name="android:padding">6dip</item>
+    </style>
+    
+    <style name="listviewContentTitles.values.padding6dip.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="listviewContentTitles.values.unit">
+        <item name="android:paddingRight">6dip</item>
+          <item name="android:paddingBottom">6dip</item>
+          <item name="android:paddingTop">6dip</item>
+            
+    </style>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <style name="edittext">      
+        <item name="android:layout_width">190dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+</resources>

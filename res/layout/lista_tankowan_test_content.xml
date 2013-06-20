@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10sp"
+    android:paddingRight="10sp"
+    android:paddingTop="2sp" >
+
+    <TextView
+        android:id="@+id/tank_list_car_litry_title"
+        style="@style/listviewContentTitles"
+        android:text="Litry: " >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tank_list_litry"
+        style="@style/listviewContentTitles.values"
+        android:layout_toRightOf="@id/tank_list_car_litry_title"
+        android:text="ilosc_litrow" 
+        android:layout_alignBottom="@id/tank_list_car_litry_title" >
+    </TextView>
+
+    <TextView 
+        style="@style/listviewContentTitles.values"
+        android:layout_toRightOf="@id/tank_list_litry"
+        android:layout_alignBottom="@id/tank_list_car_litry_title"
+        android:text=" [L]" />	
+ 
+    <TextView
+        android:id="@+id/tank_list_car_name"
+        style="@style/listviewContentTitles.values"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true" 
+        android:layout_alignBottom="@id/tank_list_car_litry_title">
+    </TextView>
+
+    <TextView
+        android:id="@+id/TextView01"
+        style="@style/listviewContentTitles"
+        android:layout_below="@id/tank_list_car_litry_title"
+        android:text="Wartość: " >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvMobile"
+        style="@style/listviewContentTitles.values"
+        android:layout_toRightOf="@id/TextView01" 
+        android:layout_alignBottom="@id/TextView01" >
+    </TextView>
+
+    <TextView
+     style="@style/listviewContentTitles.values"
+     android:layout_toRightOf="@id/tvMobile" 
+     android:text=" [zł]" 
+      android:layout_alignBottom="@id/TextView01" >
+     </TextView>
+    
+    <TextView
+        android:id="@+id/tank_list_przebieg"
+        style="@style/listviewContentTitles"
+        android:layout_below="@id/TextView01"
+        android:text="Przebieg: " >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvMail"
+        style="@style/listviewContentTitles.values"
+        android:layout_toRightOf="@id/tank_list_przebieg"
+        android:layout_alignBottom="@id/tank_list_przebieg" >
+    </TextView>
+
+    <TextView
+     style="@style/listviewContentTitles.values"
+     android:layout_toRightOf="@id/tvMail" 
+     android:layout_alignBottom="@id/tank_list_przebieg"
+     android:text=" [km]" >
+     </TextView>
+    
+    
+    
+    <TextView
+        android:id="@+id/TankDate"
+        style="@style/listviewContentTitles.values"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/TextView01" >
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tankowania_details_header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    android:layout_width="fill_parent"
+    android:layout_height="50dip" >
+    
+    
+    <View
+        android:id="@+id/samochody_details_header_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/blue" />
+
+    <Button
+        android:id="@+id/tankowania_details_button_cancel"
+        android:layout_width="60dip"
+        android:layout_height="40dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/back_icon"
+        android:onClick="backButton" />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/detailsHeader"
+        android:text="Szczegóły Tankowania" />
+
+    <Button
+        android:id="@+id/tank_edit_button"
+        android:layout_width="60dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/edit_icon"
+        android:onClick="editButton" />
+	</RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/tankowania_details_header_layout"
+        android:layout_marginTop="50dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout   
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/car_name_title"         
+            android:layout_below="@id/tankowania_details_button_cancel"       
+            android:text="Nazwa Samochodu" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/car_name"
+            android:layout_below="@id/tankowania_details_button_cancel"
+            android:layout_toRightOf="@id/car_name_title"
+            android:layout_alignTop="@id/car_name_title"
+            android:text="Przykładowa nazwa " />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/Przebieg_title"        
+            android:layout_below="@id/car_name_title"       
+            android:text="Przebieg" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/car_odometer"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/Przebieg_title"
+            android:layout_below="@id/car_name"
+            android:layout_toRightOf="@id/Przebieg_title"
+            android:text="1234567890" />
+
+        <TextView
+			style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_below="@id/car_name"  
+            android:layout_toRightOf="@id/car_odometer"
+            android:text="[km]" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/litry_title"         
+            android:layout_below="@id/Przebieg_title"         
+            android:text="Ilość Litrów" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/litry"           
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/litry_title"
+            android:layout_below="@id/car_odometer"
+            android:layout_toRightOf="@id/litry_title"
+            android:text="99" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_below="@id/Przebieg_title"
+            android:layout_toRightOf="@id/litry"
+            android:text="[L]" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/cost_per_liter_title"
+            android:layout_below="@+id/litry_title"        
+            android:text="Cena/Litr" />
+        
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"  
+            android:id="@+id/cost_per_liter"
+            android:layout_below="@id/litry_title"
+            android:layout_toRightOf="@id/cost_per_liter_title" 
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/cost_per_liter_title" />
+        
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"           
+            android:layout_below="@id/litry_title"
+            android:layout_toRightOf="@id/cost_per_liter"            
+            android:text="[zł/L]" />
+
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/total_tank_cost_title"           
+            android:layout_below="@+id/cost_per_liter_title"   
+            android:text="Łączny koszt" /> 
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/total_tank_cost"
+            android:layout_below="@id/cost_per_liter_title"
+            android:layout_toRightOf="@id/total_tank_cost_title"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/total_tank_cost_title"
+            android:text="999.99" />
+       
+        <TextView 
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_below="@id/cost_per_liter_title"
+            android:layout_toRightOf="@id/total_tank_cost"
+            android:text="[zł]"
+            />
+
+        <View
+            android:id="@+id/separator01"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/total_tank_cost_title"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+       
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/przejechane_title" 
+            android:layout_below="@+id/separator01"
+            android:text="Przejechane od\npoprzedniego\ntankowania" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/przejechane"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/przejechane_title"
+           android:layout_below="@+id/separator01"
+            android:layout_toRightOf="@id/przejechane_title"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignTop="@id/przejechane"
+            android:layout_below="@+id/separator01"
+            android:layout_toRightOf="@id/przejechane"
+            android:text="[km]"/>
+
+        
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/wydajnosc_paliwa_title"    
+            android:layout_below="@+id/przejechane_title"
+            android:text="Wydajność\nPaliwa" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/wydajnosc_paliwa"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/wydajnosc_paliwa_title"
+            android:layout_below="@id/przejechane_title"
+            android:layout_toRightOf="@id/wydajnosc_paliwa_title"
+            android:text="b/d" />
+
+        <TextView            
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:layout_alignTop="@id/wydajnosc_paliwa"
+            android:layout_below="@id/przejechane_title"
+            android:layout_toRightOf="@id/wydajnosc_paliwa"
+            android:text="[L/100 km]"/>
+
+        <View
+            android:id="@+id/separator02"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/wydajnosc_paliwa_title"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/poprzednie_tankowanie_title"    
+            android:layout_below="@+id/separator02"         
+            android:text="Poprzednie\nTankowanie" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/poprzednie_tankowanie"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/poprzednie_tankowanie_title"
+            android:layout_below="@id/separator02"
+            android:layout_toRightOf="@id/poprzednie_tankowanie_title"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/nastepne_tankowanie_title"        
+            android:layout_below="@+id/poprzednie_tankowanie_title"        
+            android:text="Następne\nTankowanie" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/nastepne_tankowanie"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/nastepne_tankowanie_title"
+            android:layout_below="@id/poprzednie_tankowanie"
+            android:layout_toRightOf="@id/nastepne_tankowanie_title"
+            android:text="b/d" />
+
+        <View
+            android:id="@+id/separator03"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/nastepne_tankowanie_title"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#d3d3d3" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/rodzaj_paliwa_title"    
+            android:layout_below="@+id/separator03"
+            android:text="Rodzaj\nPaliwa" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/rodzaj_paliwa"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/rodzaj_paliwa_title"
+            android:layout_below="@id/separator03"
+            android:layout_toRightOf="@id/rodzaj_paliwa_title"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/stacja_title"         
+            android:layout_below="@+id/rodzaj_paliwa_title"
+            android:text="Stacja" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/stacja"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/stacja_title"
+            android:layout_below="@id/rodzaj_paliwa"
+            android:layout_toRightOf="@id/stacja_title"
+            android:text="b/d" />
+
+        <TextView
+            style="@style/listviewContentTitles.padding5dip"
+            android:id="@+id/notatki_title"
+            android:layout_below="@+id/stacja_title"
+            android:text="Notatki" />
+
+        <TextView
+            style="@style/listviewContentTitles.values.padding6dip"
+            android:id="@+id/notatki"
+            android:layout_alignLeft="@id/car_name"
+            android:layout_alignTop="@id/notatki"
+            android:layout_below="@id/stacja"
+            android:layout_toRightOf="@id/notatki_title"
+            android:text="notatki.." />
+
+</RelativeLayout>
+</ScrollView>        
+</RelativeLayout>

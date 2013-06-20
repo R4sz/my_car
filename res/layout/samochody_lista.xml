@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+      <View
+            android:id="@+id/carlist_header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/blue" />
+
+        <Button
+            android:id="@+id/carlist_button_cancel"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/back_icon"
+            android:onClick="backButton" />
+
+        <TextView
+            android:id="@+id/carlist_label"
+            style="@style/detailsHeader"
+            android:text="Lista Samochodów" />
+        
+        
+   </RelativeLayout>
+   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"        
+        android:background="@color/grey"
+        >
+        
+    
+     <TextView
+            android:id="@+id/active_cars"
+            style="@style/listviewContentTitles.values.padding6dip.bold"
+            android:textColor="@color/white"
+            android:text="Brak Aktywnych Samochodów"  />
+            
+      </LinearLayout>
+   
+    <ListView
+        android:id="@+id/ListView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:padding="4dip"
+        android:text="@string/footer"
+        android:textStyle="bold|italic" />
+
+</LinearLayout>
