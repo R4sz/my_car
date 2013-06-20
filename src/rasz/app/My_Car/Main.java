@@ -91,7 +91,7 @@ public class Main extends Activity implements OnClickListener {
 		Intent m = new Intent(this, SamochodyDodaj.class);
 		startActivity(m);		
 	}
-	//Committt
+	
 	public void backButton(View v) {
 		finish();
 	}
