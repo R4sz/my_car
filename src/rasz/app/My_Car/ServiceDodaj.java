@@ -66,9 +66,6 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 	
 	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
 
-	//COMMIT TEST 2
-	
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
