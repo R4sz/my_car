@@ -1,5 +1,16 @@
-package rasz.app.My_Car;
+package rasz.app.My_Car.List;
 
+import rasz.app.My_Car.DataContainer;
+import rasz.app.My_Car.DatabaseDaneDB;
+import rasz.app.My_Car.R;
+import rasz.app.My_Car.SamochodyCarAdapter;
+import rasz.app.My_Car.SamochodyDetails;
+import rasz.app.My_Car.SamochodyDodaj;
+import rasz.app.My_Car.SamochodyEdit;
+import rasz.app.My_Car.SamochodySimpleCarInfo;
+import rasz.app.My_Car.R.array;
+import rasz.app.My_Car.R.id;
+import rasz.app.My_Car.R.layout;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
