@@ -1,5 +1,9 @@
 package rasz.app.My_Car;
 
+import rasz.app.My_Car.List.CarsList;
+import rasz.app.My_Car.List.ServiceList;
+import rasz.app.My_Car.List.TankowaniaList;
+import rasz.app.My_Car.List.WydatkiList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +23,7 @@ public class Main extends Activity implements OnClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		buttonConfig.append(R.id.przycisk_samochody, SamochodyLista.class);
+		buttonConfig.append(R.id.przycisk_samochody, CarsList.class);
 		buttonConfig.append(R.id.przycisk_tankowanie, TankowaniaDodaj.class);
 		buttonConfig.append(R.id.przycisk_naprawy_koszta, ServiceDodaj.class);
 		buttonConfig.append(R.id.przycisk_lista_tankowan, TankowaniaList.class);

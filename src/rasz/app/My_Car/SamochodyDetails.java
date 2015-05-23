@@ -6,6 +6,8 @@ import static rasz.app.My_Car.DataBase_stale.KEY_ACTIVE;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -23,7 +25,7 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 	private static int idZTablicy;
 	private static int idZlistySam;
 
-	public static SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	public static CarsRepository entry = new CarsRepository();
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

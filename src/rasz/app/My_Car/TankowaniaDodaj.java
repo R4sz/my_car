@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -64,7 +66,7 @@ public class TankowaniaDodaj extends Activity implements OnItemSelectedListener 
 
 	static DecimalFormat decim = new DecimalFormat("#.##");
 
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

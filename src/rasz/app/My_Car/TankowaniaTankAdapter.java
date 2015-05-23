@@ -2,6 +2,9 @@ package rasz.app.My_Car;
 
 import java.util.List;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +16,9 @@ import android.widget.TextView;
 public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
 
-	private List<TankowaniaSimpleTankInfo> listOfRefueling;
+	private List<FillupsRepository> listOfRefueling;
 
-	public TankowaniaTankAdapter(Context context, List<TankowaniaSimpleTankInfo> listOfRefueling) {
+	public TankowaniaTankAdapter(Context context, List<FillupsRepository> listOfRefueling) {
 		this.context = context;
 		this.listOfRefueling = listOfRefueling;
 	}
@@ -33,7 +36,7 @@ public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListene
 	}
 
 	public View getView(int position, View convertView, ViewGroup viewGroup) {
-		TankowaniaSimpleTankInfo entry = listOfRefueling.get(position);
+		FillupsRepository entry = listOfRefueling.get(position);
 		if (convertView == null) {
 			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.lista_tankowan_test_content, null);
@@ -57,9 +60,9 @@ public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListene
 		return convertView;
 	}
 
-	public String getCarName(TankowaniaSimpleTankInfo entryy) {
+	public String getCarName(FillupsRepository entryy) {
 		String j = null;
-		for (SamochodySimpleCarInfo t : DataContainer.listOfCars) {
+		for (CarsRepository t : DataContainer.listOfCars) {
 			if (t.getIdsam() == entryy.getIdsamochoduZtankowania()) {
 				j = t.getNazwa();
 			}
@@ -68,7 +71,7 @@ public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListene
 	}
 
 	public void onClick(View view) {
-		TankowaniaSimpleTankInfo entry = (TankowaniaSimpleTankInfo) view.getTag();
+		FillupsRepository entry = (FillupsRepository) view.getTag();
 		listOfRefueling.remove(entry);
 		notifyDataSetChanged();
 	}

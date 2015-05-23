@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -58,8 +61,8 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 	private EditText maintanceMiejsce;
 	private EditText maintanceNotatki;
 
-	WydatkiSimpleMaintInfo maintEntry = new WydatkiSimpleMaintInfo();
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	ExpensesRepository maintEntry = new ExpensesRepository();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

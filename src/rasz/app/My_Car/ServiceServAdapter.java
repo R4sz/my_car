@@ -2,6 +2,9 @@ package rasz.app.My_Car;
 
 import java.util.List;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,11 +15,11 @@ import android.widget.TextView;
 
 public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
-	private static ServiceSimpleServInfo servEntry = new ServiceSimpleServInfo();
+	private static ServicesRepository servEntry = new ServicesRepository();
 
-	private List<ServiceSimpleServInfo> listOfServs;
+	private List<ServicesRepository> listOfServs;
 
-	public ServiceServAdapter(Context context, List<ServiceSimpleServInfo> listOfServs) {
+	public ServiceServAdapter(Context context, List<ServicesRepository> listOfServs) {
 		this.context = context;
 		this.listOfServs = listOfServs;
 	}
@@ -55,9 +58,9 @@ public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 		return convertView;
 	}
 
-	public static String GetCarName(ServiceSimpleServInfo entryy) {
+	public static String GetCarName(ServicesRepository entryy) {
 		String j = null;
-		for (SamochodySimpleCarInfo t : DataContainer.listOfCars) {
+		for (CarsRepository t : DataContainer.listOfCars) {
 			if (t.getIdsam() == entryy.getIdsam()) {
 				j = t.getNazwa();
 				return j;
@@ -67,7 +70,7 @@ public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 	}
 
 	public void onClick(View view) {
-		ServiceSimpleServInfo servEntry = (ServiceSimpleServInfo) view.getTag();
+		ServicesRepository servEntry = (ServicesRepository) view.getTag();
 		listOfServs.remove(servEntry);
 		notifyDataSetChanged();
 	}

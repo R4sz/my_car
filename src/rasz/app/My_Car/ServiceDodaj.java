@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -64,7 +66,7 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 	private EditText serviceNotatki;
 	private String przebieg;
 	
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

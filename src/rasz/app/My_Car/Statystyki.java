@@ -6,6 +6,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,10 +18,10 @@ import android.widget.TextView;
 
 public class Statystyki extends Activity {
 	
-	public SamochodySimpleCarInfo samEntry = new SamochodySimpleCarInfo();
-	public TankowaniaSimpleTankInfo tankEntry;
-	public WydatkiSimpleMaintInfo maintEntry;
-	public ServiceSimpleServInfo servEntry;
+	public CarsRepository samEntry = new CarsRepository();
+	public FillupsRepository tankEntry;
+	public ExpensesRepository maintEntry;
+	public ServicesRepository servEntry;
 	
 	private double totalMaintCost = 0;
 	private double totalServCost = 0;

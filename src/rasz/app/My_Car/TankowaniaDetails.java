@@ -2,6 +2,9 @@ package rasz.app.My_Car;
 
 import java.text.DecimalFormat;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,7 +15,7 @@ import android.widget.TextView;
 
 public class TankowaniaDetails extends Activity {
 
-	public TankowaniaSimpleTankInfo entry;
+	public FillupsRepository entry;
 	public int position;
 	
 	public void onCreate(Bundle savedInstanceState) {
@@ -25,8 +28,8 @@ public class TankowaniaDetails extends Activity {
 		String j = null;
 		Intent in = getIntent();
 		int position = in.getIntExtra("position", 0);
-		TankowaniaSimpleTankInfo entry = DataContainer.listOfRefuels.get(position);
-		for (SamochodySimpleCarInfo t : DataContainer.listOfCars) {
+		FillupsRepository entry = DataContainer.listOfRefuels.get(position);
+		for (CarsRepository t : DataContainer.listOfCars) {
 			if (t.getIdsam() == entry.getIdsamochoduZtankowania()) {
 				j = t.getNazwa();
 				return j;
@@ -39,8 +42,8 @@ public class TankowaniaDetails extends Activity {
 		Intent in = getIntent();
 		position = in.getIntExtra("position", 0);
 		entry = DataContainer.listOfRefuels.get(position);
-		TankowaniaSimpleTankInfo previousEntry = null;
-		TankowaniaSimpleTankInfo nextEntry = null;
+		FillupsRepository previousEntry = null;
+		FillupsRepository nextEntry = null;
 		if (position != 0) {
 			previousEntry = DataContainer.listOfRefuels.get(position - 1);
 		}

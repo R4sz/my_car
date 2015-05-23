@@ -3,6 +3,8 @@ package rasz.app.My_Car;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -38,7 +40,7 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 
 	private Button samochody_pucharse_time;
 
-	public static SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	public static CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

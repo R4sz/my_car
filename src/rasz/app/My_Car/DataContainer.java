@@ -5,16 +5,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class DataContainer {
 
-	public static List<SamochodySimpleCarInfo> listOfCars = new ArrayList<SamochodySimpleCarInfo>();
-	public static List<TankowaniaSimpleTankInfo> listOfRefuels = new ArrayList<TankowaniaSimpleTankInfo>();
-	public static List<ServiceSimpleServInfo> listOfServs = new ArrayList<ServiceSimpleServInfo>();
-	public static List<WydatkiSimpleMaintInfo> listOfMaints = new ArrayList<WydatkiSimpleMaintInfo>();
+	public static List<CarsRepository> listOfCars = new ArrayList<CarsRepository>();
+	public static List<FillupsRepository> listOfRefuels = new ArrayList<FillupsRepository>();
+	public static List<ServicesRepository> listOfServs = new ArrayList<ServicesRepository>();
+	public static List<ExpensesRepository> listOfMaints = new ArrayList<ExpensesRepository>();
 
 	public static ArrayList<String> samochodyNazwy = new ArrayList<String>();
 	public static ArrayList<Integer> samochodyId = new ArrayList<Integer>();
@@ -32,28 +37,28 @@ public class DataContainer {
 			if (table.equals("cars")) {
 				listOfCars.clear();
 				while (kursor.moveToNext()) {
-					listOfCars.add(new SamochodySimpleCarInfo(kursor));
+					listOfCars.add(new CarsRepository(kursor));
 				}
 			}
 
 			if (table.equals("service")) {
 				listOfServs.clear();
 				while (kursor.moveToNext()) {
-					listOfServs.add(new ServiceSimpleServInfo(kursor));
+					listOfServs.add(new ServicesRepository(kursor));
 				}
 			}
 
 			if (table.equals("refueling")) {
 				listOfRefuels.clear();
 				while (kursor.moveToNext()) {
-					listOfRefuels.add(new TankowaniaSimpleTankInfo(kursor));
+					listOfRefuels.add(new FillupsRepository(kursor));
 				}
 			}
 
 			if (table.equals("maintance")) {
 				listOfMaints.clear();
 				while (kursor.moveToNext()) {
-					listOfMaints.add(new WydatkiSimpleMaintInfo(kursor));
+					listOfMaints.add(new ExpensesRepository(kursor));
 				}
 			}
 			if (table.equals("single")) {
@@ -89,9 +94,9 @@ public class DataContainer {
 		return 0.0;
 	}
 
-	public static Map<String, Double> consumptionCalc(List<TankowaniaSimpleTankInfo> listOfRef) {
+	public static Map<String, Double> consumptionCalc(List<FillupsRepository> listOfRef) {
 
-		TankowaniaSimpleTankInfo tankEntry;
+		FillupsRepository tankEntry;
 		double totalTankCost = 0;
 		double totalLiters = 0;
 		double minSpalanie = 999;

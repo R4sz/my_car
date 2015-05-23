@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -63,8 +66,8 @@ public class ServiceEdit extends Activity implements OnClickListener, OnItemSele
 	private EditText serviceMiejsce;
 	private EditText serviceNotatki;
 
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
-	ServiceSimpleServInfo servEntry = new ServiceSimpleServInfo();
+	CarsRepository entry = new CarsRepository();
+	ServicesRepository servEntry = new ServicesRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

@@ -2,6 +2,8 @@ package rasz.app.My_Car;
 
 import java.util.List;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +13,10 @@ import android.widget.TextView;
 
 public class SamochodyCarAdapter extends BaseAdapter {
 	private Context context;
-	private SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
-	private List<SamochodySimpleCarInfo> listOfCars;
+	private CarsRepository entry = new CarsRepository();
+	private List<CarsRepository> listOfCars;
 
-	public SamochodyCarAdapter(Context context, List<SamochodySimpleCarInfo> listOfCars) {
+	public SamochodyCarAdapter(Context context, List<CarsRepository> listOfCars) {
 		this.context = context;
 		this.listOfCars = listOfCars;
 	}

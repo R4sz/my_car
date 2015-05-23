@@ -1,5 +1,6 @@
 package rasz.app.My_Car;
 
+import rasz.app.My_Car.repository.ServicesRepository;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class ServiceDetails extends Activity {
 	private void Initelements() {
 		Intent ServlistIntent = getIntent();
 		position = ServlistIntent.getIntExtra("pos", 0);
-		ServiceSimpleServInfo servEntry = DataContainer.listOfServs.get(position);
+		ServicesRepository servEntry = DataContainer.listOfServs.get(position);
 
 		TextView CarName = (TextView) findViewById(R.id.service_car_name);
 		CarName.setText(ServiceServAdapter.GetCarName(servEntry));
