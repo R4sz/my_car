@@ -27,7 +27,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".SamochodyLista"
+            android:name="rasz.app.My_Car.List.CarsList"
             android:label="@string/etykieta_samochody" >
         </activity>
         <activity
@@ -45,7 +45,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".TankowaniaList"
+            android:name="rasz.app.My_Car.List.TankowaniaList"
             android:label="lista tankowan test" >
         </activity>
         <activity
@@ -63,7 +63,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".ServiceList"
+            android:name="rasz.app.My_Car.List.ServiceList"
             android:label="Lista Serwisowa" >
         </activity>
         <activity
@@ -81,7 +81,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".WydatkiList"
+            android:name="rasz.app.My_Car.List.WydatkiList"
             android:label="Lista Wydatków" >
         </activity>
         <activity
