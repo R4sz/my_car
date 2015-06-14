@@ -5,6 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

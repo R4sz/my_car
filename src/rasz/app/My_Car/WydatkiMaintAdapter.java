@@ -2,6 +2,9 @@ package rasz.app.My_Car;
 
 import java.util.List;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

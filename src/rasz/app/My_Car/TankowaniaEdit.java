@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import rasz.app.My_Car.repository.FillupsRepository;
+
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -67,7 +69,7 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 	private double przejechane;
 	private double przebiegNowy;
 
-	TankowaniaSimpleTankInfo tankEntry = new TankowaniaSimpleTankInfo();
+	FillupsRepository tankEntry = new FillupsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

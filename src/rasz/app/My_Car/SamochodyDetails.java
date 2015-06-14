@@ -6,6 +6,8 @@ import static rasz.app.My_Car.DataBase_stale.KEY_ACTIVE;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;

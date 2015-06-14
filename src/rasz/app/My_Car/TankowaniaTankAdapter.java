@@ -2,6 +2,9 @@ package rasz.app.My_Car;
 
 import java.util.List;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,7 +74,7 @@ public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListene
 	}
 
 	public void onClick(View view) {
-		TankowaniaSimpleTankInfo entry = (TankowaniaSimpleTankInfo) view.getTag();
+		FillupsRepository entry = (FillupsRepository) view.getTag();
 		listOfRefueling.remove(entry);
 		notifyDataSetChanged();
 	}

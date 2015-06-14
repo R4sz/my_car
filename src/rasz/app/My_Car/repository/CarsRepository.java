@@ -2,7 +2,7 @@ package rasz.app.My_Car.repository;
 
 import android.database.Cursor;
 
-public class CarsRepository {
+public class CarsRepository extends AbstractRepository {
 
     private int idsam;
     private String carName;

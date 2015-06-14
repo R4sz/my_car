@@ -2,6 +2,9 @@ package rasz.app.My_Car;
 
 import java.util.List;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,7 +73,7 @@ public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 	}
 
 	public void onClick(View view) {
-		ServiceSimpleServInfo servEntry = (ServiceSimpleServInfo) view.getTag();
+		ServicesRepository servEntry = (ServicesRepository) view.getTag();
 		listOfServs.remove(servEntry);
 		notifyDataSetChanged();
 	}
