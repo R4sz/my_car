@@ -1,25 +1,27 @@
 package rasz.app.My_Car;
 
-import java.text.DecimalFormat;
-
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
+
+import java.text.DecimalFormat;
+
+import rasz.app.My_Car.repository.FillupsRepository;
 
 public class TankowaniaList extends Activity {
 
-	private TankowaniaSimpleTankInfo entry = new TankowaniaSimpleTankInfo();
+	private FillupsRepository entry = new FillupsRepository();
 	static DecimalFormat decim = new DecimalFormat("#.##");
 	private double przejechane = DataContainer.getPrzejechane();
 

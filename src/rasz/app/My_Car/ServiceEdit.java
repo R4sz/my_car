@@ -31,6 +31,9 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+
 public class ServiceEdit extends Activity implements OnClickListener, OnItemSelectedListener {
 	private EditText service_przebieg;
 	private EditText service_koszt_calosc;
@@ -63,8 +66,8 @@ public class ServiceEdit extends Activity implements OnClickListener, OnItemSele
 	private EditText serviceMiejsce;
 	private EditText serviceNotatki;
 
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
-	ServiceSimpleServInfo servEntry = new ServiceSimpleServInfo();
+	CarsRepository entry = new CarsRepository();
+	ServicesRepository servEntry = new ServicesRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -248,7 +251,7 @@ public class ServiceEdit extends Activity implements OnClickListener, OnItemSele
 		Spinner spnir = (Spinner) parent;
 
 		if (spnir.getId() == R.id.service_samochod)
-			wybor_samochodu = "samochód nieokreœlony";
+			wybor_samochodu = "samochï¿½d nieokreï¿½lony";
 	}
 
 	private void initUiElements() {		
@@ -326,7 +329,7 @@ public class ServiceEdit extends Activity implements OnClickListener, OnItemSele
 			bd.update(DB_SAMOCHODY_TABLE, wartosci1, "idsam = " + idsam, null);
 		}
 		finish();
-		Toast.makeText(getApplicationContext(), "Dane zosta³y zaktualizowane poprawnie", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Dane zostaï¿½y zaktualizowane poprawnie", Toast.LENGTH_LONG).show();
 
 	}
 	public void backButton(View v) {

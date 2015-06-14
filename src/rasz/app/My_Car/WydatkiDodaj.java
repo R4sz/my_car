@@ -27,6 +27,8 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 	private EditText maintancePrzebieg;
 	private EditText maintanceKoszt;
@@ -35,7 +37,7 @@ public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 	static String wyborSamochodu;
 	static ArrayList<String> samochodyNazwy = new ArrayList<String>();
 	static ArrayList<Integer> samochodyId = new ArrayList<Integer>();
-	String maintance[] = { "Myjnia", "Ubezpiecznienie", "Przegl¹d", "Parking", "Podatek", "Eksploatacja", "Inne" };
+	String maintance[] = { "Myjnia", "Ubezpiecznienie", "Przeglï¿½d", "Parking", "Podatek", "Eksploatacja", "Inne" };
 	private String maintanceChoose;
 
 	private Button btnChangeDate;
@@ -58,7 +60,7 @@ public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 	private EditText maintanceMiejsce;
 	private EditText maintanceNotatki;
 
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -186,7 +188,7 @@ public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 
 		for (int i = 0; i < DataContainer.listOfCars.size(); i++) {
 			entry = DataContainer.listOfCars.get(i);
-			samochodyNazwy.add(entry.getNazwa());
+			samochodyNazwy.add(entry.getCarName());
 			samochodyId.add(entry.getIdsam());
 		}
 
@@ -213,9 +215,9 @@ public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 	public void onNothingSelected(AdapterView<?> parent) {
 		Spinner spnir = (Spinner) parent;
 		if (spnir.getId() == R.id.maintance_samochod)
-			wyborSamochodu = "samochód nieokreœlony";
+			wyborSamochodu = "samochï¿½d nieokreï¿½lony";
 		if (spnir.getId() == R.id.maintance_maintanced) {
-			maintanceChoose = "wydatek nieokreœlony";
+			maintanceChoose = "wydatek nieokreï¿½lony";
 		}
 
 	}
@@ -286,7 +288,7 @@ public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 			bd.update(DB_SAMOCHODY_TABLE, wartosci1, "idsam = " + Integer.parseInt(idsamString), null);
 		}
 		finish();
-		Toast.makeText(getApplicationContext(), "Wydatek  " + maintanceChoose + " zosta³ dodany", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Wydatek  " + maintanceChoose + " zostaï¿½ dodany", Toast.LENGTH_LONG).show();
 
 	}
 

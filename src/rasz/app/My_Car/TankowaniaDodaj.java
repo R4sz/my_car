@@ -29,6 +29,8 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 public class TankowaniaDodaj extends Activity implements OnItemSelectedListener {
 	private EditText tankowaniaPrzebieg;
 	private EditText tankowaniaLitry;
@@ -64,7 +66,7 @@ public class TankowaniaDodaj extends Activity implements OnItemSelectedListener 
 
 	static DecimalFormat decim = new DecimalFormat("#.##");
 
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -249,7 +251,7 @@ public class TankowaniaDodaj extends Activity implements OnItemSelectedListener 
 		if (spnir.getId() == R.id.tankowania_paliwo)
 			wyborPaliwa = "paliwoNieokreslone";
 		if (spnir.getId() == R.id.tankowania_samochod)
-			wyborSamochodu = "samochódNieokreœlony";
+			wyborSamochodu = "samochï¿½dNieokreï¿½lony";
 	}
 
 	private void initUiElements() {
@@ -338,7 +340,7 @@ public class TankowaniaDodaj extends Activity implements OnItemSelectedListener 
 			bd.update(DB_SAMOCHODY_TABLE, wartosci1, idsamint + "=" + "idsam", null);
 		}
 		finish();
-		Toast.makeText(getApplicationContext(), "Tankowanie o przebiegu  " + przebieg + " zosta³o dodane", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Tankowanie o przebiegu  " + przebieg + " zostaï¿½o dodane", Toast.LENGTH_LONG).show();
 
 		Toast.makeText(getApplicationContext(), "Spalanie od ost. tankowania: " + decim.format(spalanie) + "/100km", Toast.LENGTH_LONG).show();
 	}

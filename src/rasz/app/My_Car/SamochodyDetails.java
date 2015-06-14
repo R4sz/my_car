@@ -17,13 +17,15 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 public class SamochodyDetails extends Activity implements OnClickListener {
 
 	private static int aktywny;
 	private static int idZTablicy;
 	private static int idZlistySam;
 
-	public static SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	public static CarsRepository entry = new CarsRepository();
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -86,7 +88,7 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 	public void pokazZdarzenia() {
 
 		TextView carDetailsName = (TextView) findViewById(R.id.car_details_name);
-		carDetailsName.setText(entry.getNazwa());
+		carDetailsName.setText(entry.getCarName());
 
 		TextView carMark = (TextView) findViewById(R.id.car_mark);
 		carMark.setText(entry.getMarka());

@@ -46,14 +46,14 @@ public class CarsList extends Activity {
 
 			entry = DataContainer.listOfCars.get(i);
 			if (entry.getAktywny() == 1) {
-				aktywne += " " + entry.getNazwa();
+				aktywne += " " + entry.getCarName();
 			}
 		} 
 
 		if (!aktywne.equals("Aktywne Samochody:")) {		
 			active.setText(aktywne);
 		} else {
-			active.setText("Brak aktywnych samochodów");
+			active.setText("Brak aktywnych samochodï¿½w");
 		}
 
 		ListView list = (ListView) findViewById(R.id.ListView01);

@@ -28,6 +28,9 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 	private EditText maintancePrzebieg;
 	private EditText maintanceKoszt;
@@ -36,7 +39,7 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 	static String wyborSamochodu;
 	static ArrayList<String> samochodyNazwy = new ArrayList<String>();
 	static ArrayList<Integer> samochodyId = new ArrayList<Integer>();
-	String maintance[] = { "Myjnia", "Ubezpiecznienie", "Przegl¹d", "Parking", "Podatek", "Eksploatacja", "Inne" };
+	String maintance[] = { "Myjnia", "Ubezpiecznienie", "Przeglï¿½d", "Parking", "Podatek", "Eksploatacja", "Inne" };
 	private String maintanceChoose;
 
 	private Button btnChangeDate;
@@ -58,8 +61,8 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 	private EditText maintanceMiejsce;
 	private EditText maintanceNotatki;
 
-	WydatkiSimpleMaintInfo maintEntry = new WydatkiSimpleMaintInfo();
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	ExpensesRepository maintEntry = new ExpensesRepository();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -181,7 +184,7 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 
 		for (int i = 0; i < DataContainer.listOfCars.size(); i++) {
 			entry = DataContainer.listOfCars.get(i);
-			samochodyNazwy.add(entry.getNazwa());
+			samochodyNazwy.add(entry.getCarName());
 			samochodyId.add(entry.getIdsam());
 		}
 
@@ -207,9 +210,9 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 	public void onNothingSelected(AdapterView<?> parent) {
 		Spinner spnir = (Spinner) parent;
 		if (spnir.getId() == R.id.maintance_samochod)
-			wyborSamochodu = "samochód nieokreœlony";
+			wyborSamochodu = "samochï¿½d nieokreï¿½lony";
 		if (spnir.getId() == R.id.maintance_maintanced) {
-			maintanceChoose = "wydatek nieokreœlony";
+			maintanceChoose = "wydatek nieokreï¿½lony";
 		}
 	}
 
@@ -296,7 +299,7 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 			bd.update(DB_SAMOCHODY_TABLE, wartosci1, "idsam = " + idsam, null);
 		}
 		finish();
-		Toast.makeText(getApplicationContext(), "Dane zosta³y zaktualizowane poprawnie", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Dane zostaï¿½y zaktualizowane poprawnie", Toast.LENGTH_LONG).show();
 
 	}
 

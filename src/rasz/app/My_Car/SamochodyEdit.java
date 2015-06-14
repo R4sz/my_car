@@ -17,6 +17,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import rasz.app.My_Car.repository.CarsRepository;
+
 import static rasz.app.My_Car.DataBase_stale.*;
 
 public class SamochodyEdit extends Activity implements OnClickListener, AdapterView.OnItemSelectedListener {
@@ -38,7 +41,7 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 
 	private Button samochody_pucharse_time;
 
-	public static SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	public static CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -85,13 +88,13 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 	}
 	public void initUiElements() {
 		TextView label = (TextView) findViewById(R.id.samochody_label);
-		label.setText("Edytuj Samochód...");
+		label.setText("Edytuj Samochï¿½d...");
 
 		idCar = entry.getIdsam();
 		paliwo = entry.getPaliwo();
 
 		samochody_nazwa = (EditText) findViewById(R.id.samochody_nazwa);
-		samochody_nazwa.setText(entry.getNazwa());
+		samochody_nazwa.setText(entry.getCarName());
 
 		samochody_marka = (EditText) findViewById(R.id.samochody_marka);
 		samochody_marka.setText(entry.getMarka());
@@ -180,7 +183,7 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 
 	// wyswietlenie informacji
 	private void pokazZdarzenia() {
-		Toast.makeText(getApplicationContext(), "Dane zosta³y zaktualizowane poprawnie", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Dane zostaï¿½y zaktualizowane poprawnie", Toast.LENGTH_LONG).show();
 		finish();
 	}
 

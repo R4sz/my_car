@@ -14,9 +14,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 public class WydatkiList extends Activity {
 
-	private WydatkiSimpleMaintInfo entry = new WydatkiSimpleMaintInfo();
+	private ExpensesRepository entry = new ExpensesRepository();
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

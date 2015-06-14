@@ -10,13 +10,16 @@ import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 public class WydatkiMaintAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
-	private static WydatkiSimpleMaintInfo maintEntry = new WydatkiSimpleMaintInfo();
+	private static ExpensesRepository maintEntry = new ExpensesRepository();
 
-	private List<WydatkiSimpleMaintInfo> listOfMaints;
+	private List<ExpensesRepository> listOfMaints;
 
-	public WydatkiMaintAdapter(Context context, List<WydatkiSimpleMaintInfo> listOfMaints) {
+	public WydatkiMaintAdapter(Context context, List<ExpensesRepository> listOfMaints) {
 		this.context = context;
 		this.listOfMaints = listOfMaints;
 	}
@@ -58,18 +61,18 @@ public class WydatkiMaintAdapter extends BaseAdapter implements OnClickListener 
 		return convertView;
 	}
 
-	public static String getCarName(WydatkiSimpleMaintInfo entryy) {
+	public static String getCarName(ExpensesRepository entryy) {
 		String j = null;
-		for (SamochodySimpleCarInfo t : DataContainer.listOfCars) {
+		for (CarsRepository t : DataContainer.listOfCars) {
 			if (t.getIdsam() == entryy.getIdsam()) {
-				j = t.getNazwa();
+				j = t.getCarName();
 			}
 		}
 		return j;
 	}
 
 	public void onClick(View view) {
-		WydatkiSimpleMaintInfo maintEntry = (WydatkiSimpleMaintInfo) view.getTag();
+		ExpensesRepository maintEntry = (ExpensesRepository) view.getTag();
 		listOfMaints.remove(maintEntry);
 		notifyDataSetChanged();
 	}

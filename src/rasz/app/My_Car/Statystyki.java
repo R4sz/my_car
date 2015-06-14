@@ -11,12 +11,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ExpensesRepository;
+import rasz.app.My_Car.repository.FillupsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+
 public class Statystyki extends Activity {
 	
-	public SamochodySimpleCarInfo samEntry = new SamochodySimpleCarInfo();
-	public TankowaniaSimpleTankInfo tankEntry;
-	public WydatkiSimpleMaintInfo maintEntry;
-	public ServiceSimpleServInfo servEntry;
+	public CarsRepository samEntry = new CarsRepository();
+	public FillupsRepository tankEntry;
+	public ExpensesRepository maintEntry;
+	public ServicesRepository servEntry;
 	
 	private double totalMaintCost = 0;
 	private double totalServCost = 0;

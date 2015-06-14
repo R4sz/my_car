@@ -27,7 +27,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".SamochodyLista"
+            android:name=".List.CarsList"
             android:label="@string/etykieta_samochody" >
         </activity>
         <activity

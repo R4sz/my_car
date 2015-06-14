@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import rasz.app.My_Car.repository.ServicesRepository;
+
 public class ServiceDetails extends Activity {
 	
 	private int position = 0;
@@ -27,7 +29,7 @@ public class ServiceDetails extends Activity {
 	private void Initelements() {
 		Intent ServlistIntent = getIntent();
 		position = ServlistIntent.getIntExtra("pos", 0);
-		ServiceSimpleServInfo servEntry = DataContainer.listOfServs.get(position);
+        ServicesRepository servEntry = DataContainer.listOfServs.get(position);
 
 		TextView CarName = (TextView) findViewById(R.id.service_car_name);
 		CarName.setText(ServiceServAdapter.GetCarName(servEntry));

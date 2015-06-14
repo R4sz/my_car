@@ -14,9 +14,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
+import rasz.app.My_Car.repository.ServicesRepository;
+
 public class ServiceList extends Activity {
 
-	private ServiceSimpleServInfo entry = new ServiceSimpleServInfo();
+	private ServicesRepository entry = new ServicesRepository();
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

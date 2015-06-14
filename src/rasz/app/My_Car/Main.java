@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import rasz.app.My_Car.List.CarsList;
+
 public class Main extends Activity implements OnClickListener {
 
 	protected static SparseArray<Class<? extends Activity>> buttonConfig = new SparseArray<Class<? extends Activity>>();
@@ -19,7 +21,7 @@ public class Main extends Activity implements OnClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		buttonConfig.append(R.id.przycisk_samochody, SamochodyLista.class);
+		buttonConfig.append(R.id.przycisk_samochody, CarsList.class);
 		buttonConfig.append(R.id.przycisk_tankowanie, TankowaniaDodaj.class);
 		buttonConfig.append(R.id.przycisk_naprawy_koszta, ServiceDodaj.class);
 		buttonConfig.append(R.id.przycisk_lista_tankowan, TankowaniaList.class);
@@ -40,7 +42,7 @@ public class Main extends Activity implements OnClickListener {
 	public void nullCarTable() {
 		Intent samochodyDodaj = new Intent(this, SamochodyDodaj.class);
 		startActivity(samochodyDodaj);
-		Toast.makeText(getApplicationContext(), "Najpierw Dodaj Samochód...", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Najpierw Dodaj Samochï¿½d...", Toast.LENGTH_LONG).show();
 	}
 
 	public void onClick(View v) {

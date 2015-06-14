@@ -27,6 +27,8 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
+import rasz.app.My_Car.repository.FillupsRepository;
+
 public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 	private EditText tankowaniaPrzebieg;
 	private EditText tankowaniaLitry;
@@ -238,7 +240,7 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 		if (spnir.getId() == R.id.tankowania_paliwo)
 			wyborPaliwa = "paliwo nieokreslone";
 		if (spnir.getId() == R.id.tankowania_samochod)
-			wyborSamochodu = "samochód nieokreœlony";
+			wyborSamochodu = "samochï¿½d nieokreï¿½lony";
 	}
 
 	private void initUiElements() {
@@ -247,7 +249,7 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 
 		Intent intent = getIntent();
 		idListForExtraMenu = intent.getIntExtra("list_position", 0);
-		TankowaniaSimpleTankInfo tankEntry = DataContainer.listOfRefuels.get(idListForExtraMenu);
+		FillupsRepository tankEntry = DataContainer.listOfRefuels.get(idListForExtraMenu);
 
 		idsamztnk = tankEntry.getIdsamochoduZtankowania();
 		paliwoForSpinner = tankEntry.getRodzajPaliwa();
@@ -370,7 +372,7 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 		}
 
 		finish();
-		Toast.makeText(getApplicationContext(), "Tankowanie o przebiegu  " + przebieg + " zosta³o zapisane poprawnie", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Tankowanie o przebiegu  " + przebieg + " zostaï¿½o zapisane poprawnie", Toast.LENGTH_LONG).show();
 	}
 
 	public void backButton(View v) {

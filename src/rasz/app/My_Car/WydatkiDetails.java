@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import rasz.app.My_Car.repository.ExpensesRepository;
+
 public class WydatkiDetails extends Activity {
 
 	private int position = 0;
@@ -26,7 +28,7 @@ public class WydatkiDetails extends Activity {
 	private void Initelements() {
 		Intent maintListIntent = getIntent();
 		position = maintListIntent.getIntExtra("pos", 0);
-		WydatkiSimpleMaintInfo MaintEntry = DataContainer.listOfMaints.get(position);
+		ExpensesRepository MaintEntry = DataContainer.listOfMaints.get(position);
 
 		TextView CarName = (TextView) findViewById(R.id.maintance_car_name);
 		CarName.setText(WydatkiMaintAdapter.getCarName(MaintEntry));

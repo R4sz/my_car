@@ -10,13 +10,16 @@ import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import rasz.app.My_Car.repository.CarsRepository;
+import rasz.app.My_Car.repository.ServicesRepository;
+
 public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
-	private static ServiceSimpleServInfo servEntry = new ServiceSimpleServInfo();
+	private static ServicesRepository servEntry = new ServicesRepository();
 
-	private List<ServiceSimpleServInfo> listOfServs;
+	private List<ServicesRepository> listOfServs;
 
-	public ServiceServAdapter(Context context, List<ServiceSimpleServInfo> listOfServs) {
+	public ServiceServAdapter(Context context, List<ServicesRepository> listOfServs) {
 		this.context = context;
 		this.listOfServs = listOfServs;
 	}
@@ -55,11 +58,11 @@ public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 		return convertView;
 	}
 
-	public static String GetCarName(ServiceSimpleServInfo entryy) {
+	public static String GetCarName(ServicesRepository entryy) {
 		String j = null;
-		for (SamochodySimpleCarInfo t : DataContainer.listOfCars) {
+		for (CarsRepository t : DataContainer.listOfCars) {
 			if (t.getIdsam() == entryy.getIdsam()) {
-				j = t.getNazwa();
+				j = t.getCarName();
 				return j;
 			}
 		}

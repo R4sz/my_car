@@ -30,6 +30,8 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
+import rasz.app.My_Car.repository.CarsRepository;
+
 public class ServiceDodaj extends Activity implements OnClickListener, OnItemSelectedListener {
 	private EditText servicePrzebieg;
 	private EditText serviceKosztCalosc;
@@ -64,7 +66,7 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 	private EditText serviceNotatki;
 	private String przebieg;
 	
-	SamochodySimpleCarInfo entry = new SamochodySimpleCarInfo();
+	CarsRepository entry = new CarsRepository();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -250,7 +252,7 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 		Spinner spnir = (Spinner) parent;
 
 		if (spnir.getId() == R.id.service_samochod)
-			wyborSamochodu = "samochód nieokreœlony";
+			wyborSamochodu = "samochï¿½d nieokreï¿½lony";
 	}
 
 	private void initUiElements() {
@@ -282,7 +284,7 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 		String idsamString = Integer.toString(idsam);
 
 		if (serwisowanoStr.length()<2) {
-			servicedButton.setError("Wymagany wybór kategorii");
+			servicedButton.setError("Wymagany wybï¿½r kategorii");
 		} else {
 			DataContainer.database = new DatabaseDaneDB(this);
 			try {
@@ -315,7 +317,7 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 			bd.update(DB_SAMOCHODY_TABLE, wartosci1, "idsam = " + Integer.parseInt(idsamString), null);
 		}
 
-		Toast.makeText(getApplicationContext(), "Naprawa o przebiegu  " + przebieg + " zosta³a dodana", Toast.LENGTH_LONG).show();
+		Toast.makeText(getApplicationContext(), "Naprawa o przebiegu  " + przebieg + " zostaï¿½a dodana", Toast.LENGTH_LONG).show();
 		finish();
 	}
 
