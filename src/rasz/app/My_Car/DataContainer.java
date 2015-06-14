@@ -14,11 +14,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import rasz.app.My_Car.repository.CarsRepository;
-import rasz.app.My_Car.repository.ExpensesRepository;
-import rasz.app.My_Car.repository.FillupsRepository;
-import rasz.app.My_Car.repository.ServicesRepository;
-
 public class DataContainer {
 
 	public static List<CarsRepository> listOfCars = new ArrayList<CarsRepository>();
@@ -85,7 +80,7 @@ public class DataContainer {
 
 		for (int i = 0; i < listOfCars.size(); i++) {
 			samochodyNazwy.add(listOfCars.get(i).getCarName());
-			samochodyId.add(listOfCars.get(i).getIdsam());
+			samochodyId.add(listOfCars.get(i).getId());
 		}
 	}
 

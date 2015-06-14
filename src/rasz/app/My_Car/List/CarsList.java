@@ -94,7 +94,7 @@ public class CarsList extends Activity {
 
         int idListForExtraMenu = info.position;
         entry = DataContainer.listOfCars.get(idListForExtraMenu);
-        int idCar = entry.getIdsam();
+        int idCar = entry.getId();
 
         DataContainer.database = new DatabaseDaneDB(this);
         SQLiteDatabase bd = DataContainer.database.getReadableDatabase();

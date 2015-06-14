@@ -4,21 +4,19 @@ import android.database.Cursor;
 
 public class CarsRepository extends AbstractRepository {
 
-    private int idsam;
     private String carName;
-    private String marka;
+    private String brand;
     private String model;
-    private int rok;
-    private Long przebieg;
-    private Double pojSilnika;
-    private String paliwo;
-    private String symbolSilnika;
+    private int produceYear;
+    private Double engineCap;
+    private String fuel;
+    private String engineSymbol;
     private String vin;
     private int aktywny;
-    private int przejechane;
+    private int ownMileage;
     private long dateInMms;
-    private double cena;
-    private Long przebiegStart;
+    private double price;
+    private Long startMileage;
 
     public CarsRepository() {
 
@@ -27,45 +25,40 @@ public class CarsRepository extends AbstractRepository {
     public CarsRepository(Cursor kursor) {
         this();
 
-        this.idsam = kursor.getInt(0);
         this.carName = kursor.getString(1);
-        this.marka = kursor.getString(2);
+        this.brand = kursor.getString(2);
         this.model = kursor.getString(3);
-        this.rok = kursor.getInt(4);
-        this.przebieg = kursor.getLong(5);
-        this.pojSilnika = kursor.getDouble(6);
-        this.paliwo = kursor.getString(7);
-        this.symbolSilnika = kursor.getString(8);
+        this.produceYear = kursor.getInt(4);
+        this. = kursor.getLong(5);
+        this.engineCap = kursor.getDouble(6);
+        this.fuel = kursor.getString(7);
+        this.engineSymbol = kursor.getString(8);
         this.vin = kursor.getString(9);
         this.aktywny = kursor.getInt(10);
-        this.przejechane = kursor.getInt(11);
+        this.ownMileage = kursor.getInt(11);
         this.dateInMms = kursor.getLong(12);
-        this.przebiegStart = kursor.getLong(13);
-        this.cena = kursor.getDouble(14);
+        this.startMileage = kursor.getLong(13);
+        this.price = kursor.getDouble(14);
     }
 
     public void setAktywny(int aktywny) {
         this.aktywny = aktywny;
     }
 
-    public int getIdsam() {
-        return idsam;
-    }
-
     public String getCarName() {
         return carName;
     }
 
-    public String getMarka() {
-        return marka;
+    public String getBrand() {
+        return brand;
     }
 
     public String getModel() {
         return model;
     }
 
-    public int getRok() {
-        return rok;
+    public int getProduceYear() {
+        return produceYear;
     }
 
     public Long getPrzebieg() {
@@ -73,15 +66,15 @@ public class CarsRepository extends AbstractRepository {
     }
 
     public Double getPoj_silnika() {
-        return pojSilnika;
+        return engineCap;
     }
 
-    public String getPaliwo() {
-        return paliwo;
+    public String getFuel() {
+        return fuel;
     }
 
     public String getSymbol_silnika() {
-        return symbolSilnika;
+        return engineSymbol;
     }
 
     public String getVin() {
@@ -92,8 +85,8 @@ public class CarsRepository extends AbstractRepository {
         return aktywny;
     }
 
-    public int getPrzejechane() {
-        return przejechane;
+    public int getOwnMileage() {
+        return ownMileage;
     }
 
     public void setPrzebieg(Long przebieg) {
@@ -104,11 +97,11 @@ public class CarsRepository extends AbstractRepository {
         return dateInMms;
     }
 
-    public long getPrzebiegStart() {
-        return przebiegStart;
+    public long getStartMileage() {
+        return startMileage;
     }
 
-    public double getCena() {
-        return cena;
+    public double getPrice() {
+        return price;
     }
 }

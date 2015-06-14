@@ -13,9 +13,6 @@ import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import rasz.app.My_Car.repository.CarsRepository;
-import rasz.app.My_Car.repository.ServicesRepository;
-
 public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
 	private static ServicesRepository servEntry = new ServicesRepository();
@@ -64,7 +61,7 @@ public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 	public static String GetCarName(ServicesRepository entryy) {
 		String j = null;
 		for (CarsRepository t : DataContainer.listOfCars) {
-			if (t.getIdsam() == entryy.getIdsam()) {
+			if (t.getId() == entryy.getIdsam()) {
 				j = t.getCarName();
 				return j;
 			}

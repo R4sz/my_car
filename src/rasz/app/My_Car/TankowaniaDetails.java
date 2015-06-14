@@ -30,7 +30,7 @@ public class TankowaniaDetails extends Activity {
 		int position = in.getIntExtra("position", 0);
 		FillupsRepository entry = DataContainer.listOfRefuels.get(position);
 		for (CarsRepository t : DataContainer.listOfCars) {
-			if (t.getIdsam() == entry.getIdsamochoduZtankowania()) {
+			if (t.getId() == entry.getIdsamochoduZtankowania()) {
 				j = t.getCarName();
 				return j;
 			}

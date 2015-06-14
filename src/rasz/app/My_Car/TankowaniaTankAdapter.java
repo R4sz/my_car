@@ -13,9 +13,6 @@ import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import rasz.app.My_Car.repository.CarsRepository;
-import rasz.app.My_Car.repository.FillupsRepository;
-
 public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
 
@@ -66,7 +63,7 @@ public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListene
 	public String getCarName(FillupsRepository entryy) {
 		String j = null;
 		for (CarsRepository t : DataContainer.listOfCars) {
-			if (t.getIdsam() == entryy.getIdsamochoduZtankowania()) {
+			if (t.getId() == entryy.getIdsamochoduZtankowania()) {
 				j = t.getCarName();
 			}
 		}

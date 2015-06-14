@@ -20,8 +20,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import rasz.app.My_Car.repository.CarsRepository;
-
 import static rasz.app.My_Car.DataBase_stale.*;
 
 public class SamochodyEdit extends Activity implements OnClickListener, AdapterView.OnItemSelectedListener {
@@ -92,20 +90,20 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 		TextView label = (TextView) findViewById(R.id.samochody_label);
 		label.setText("Edytuj Samoch�d...");
 
-		idCar = entry.getIdsam();
-		paliwo = entry.getPaliwo();
+		idCar = entry.getId();
+		paliwo = entry.getFuel();
 
 		samochody_nazwa = (EditText) findViewById(R.id.samochody_nazwa);
 		samochody_nazwa.setText(entry.getCarName());
 
 		samochody_marka = (EditText) findViewById(R.id.samochody_marka);
-		samochody_marka.setText(entry.getMarka());
+		samochody_marka.setText(entry.getBrand());
 
 		samochody_model = (EditText) findViewById(R.id.samochody_model);
 		samochody_model.setText(entry.getModel());
 
 		samochody_rok_produkcji = (EditText) findViewById(R.id.samochody_rok_produkcji);
-		String rok = Integer.toString(entry.getRok());
+		String rok = Integer.toString(entry.getProduceYear());
 		samochody_rok_produkcji.setText(rok);
 
 		samochody_aktualny_przebieg = (EditText) findViewById(R.id.samochody_aktualny_przebieg);
@@ -123,7 +121,7 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 		samochody_vin.setText(entry.getVin());
 
 		samochodyPrice = (EditText) findViewById(R.id.samochody_price);
-		samochodyPrice.setText(Double.toString(entry.getCena()));
+		samochodyPrice.setText(Double.toString(entry.getPrice()));
 
 		Date pucharseDate = new Date(entry.getDateInMms());
 		SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");

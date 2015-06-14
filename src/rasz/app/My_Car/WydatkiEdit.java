@@ -31,9 +31,6 @@ import static rasz.app.My_Car.DataBase_stale.*;
 import android.app.TimePickerDialog;
 import android.widget.TimePicker;
 
-import rasz.app.My_Car.repository.CarsRepository;
-import rasz.app.My_Car.repository.ExpensesRepository;
-
 public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 	private EditText maintancePrzebieg;
 	private EditText maintanceKoszt;
@@ -188,7 +185,7 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 		for (int i = 0; i < DataContainer.listOfCars.size(); i++) {
 			entry = DataContainer.listOfCars.get(i);
 			samochodyNazwy.add(entry.getCarName());
-			samochodyId.add(entry.getIdsam());
+			samochodyId.add(entry.getId());
 		}
 
 		ArrayAdapter<String> aa = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, samochodyNazwy);

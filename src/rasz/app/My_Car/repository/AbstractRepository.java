@@ -1,4 +1,5 @@
 package rasz.app.My_Car.repository;
+import android.database.Cursor;
 
 public abstract class AbstractRepository {
 
@@ -8,6 +9,13 @@ public abstract class AbstractRepository {
 	private long timestamp;
 	private String place;
 	private String notes;
+
+    public AbstractRepository (Cursor cursor) {
+        this.id = kursor.getInt(0);
+
+
+
+    }
 
 	public int getId() {
 		return id;

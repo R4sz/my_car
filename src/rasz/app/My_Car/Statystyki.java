@@ -16,11 +16,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import rasz.app.My_Car.repository.CarsRepository;
-import rasz.app.My_Car.repository.ExpensesRepository;
-import rasz.app.My_Car.repository.FillupsRepository;
-import rasz.app.My_Car.repository.ServicesRepository;
-
 public class Statystyki extends Activity {
 	
 	public CarsRepository samEntry = new CarsRepository();
@@ -123,7 +118,7 @@ public class Statystyki extends Activity {
 		Double summaryCarsPrice = 0.0;
 		for (int i = 0 ; i < DataContainer.listOfCars.size() ; i++ ) {
 			samEntry = DataContainer.listOfCars.get(i);
-			summaryCarsPrice += samEntry.getCena();			
+			summaryCarsPrice += samEntry.getPrice();
 		}
 				
 		TextView pucharse_cost = (TextView) findViewById(R.id.pucharse_cost);

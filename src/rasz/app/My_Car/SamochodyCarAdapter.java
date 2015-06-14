@@ -44,7 +44,7 @@ public class SamochodyCarAdapter extends BaseAdapter {
         nazwaSam.setText(entry.getCarName());
 
         TextView markaSam = (TextView) convertView.findViewById(R.id.lista_marka_samochodu);
-        markaSam.setText(entry.getMarka());
+        markaSam.setText(entry.getBrand());
 
         TextView modelSam = (TextView) convertView.findViewById(R.id.lista_model_samochodu);
         modelSam.setText(entry.getModel());

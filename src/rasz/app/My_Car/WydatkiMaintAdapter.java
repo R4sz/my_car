@@ -13,9 +13,6 @@ import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import rasz.app.My_Car.repository.CarsRepository;
-import rasz.app.My_Car.repository.ExpensesRepository;
-
 public class WydatkiMaintAdapter extends BaseAdapter implements OnClickListener {
 	private Context context;
 	private static ExpensesRepository maintEntry = new ExpensesRepository();
@@ -67,7 +64,7 @@ public class WydatkiMaintAdapter extends BaseAdapter implements OnClickListener 
 	public static String getCarName(ExpensesRepository entryy) {
 		String j = null;
 		for (CarsRepository t : DataContainer.listOfCars) {
-			if (t.getIdsam() == entryy.getIdsam()) {
+			if (t.getId() == entryy.getIdsam()) {
 				j = t.getCarName();
 			}
 		}

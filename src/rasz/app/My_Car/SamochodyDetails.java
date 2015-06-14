@@ -19,8 +19,6 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import rasz.app.My_Car.repository.CarsRepository;
-
 public class SamochodyDetails extends Activity implements OnClickListener {
 
 	private static int aktywny;
@@ -73,7 +71,7 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 		Intent samochody_lista = getIntent();
 		idZlistySam = samochody_lista.getIntExtra("position", 0);
 		entry = DataContainer.listOfCars.get(idZlistySam);
-		idZTablicy = entry.getIdsam();
+		idZTablicy = entry.getId();
 		aktywny = entry.getAktywny();
 	}
 
@@ -93,13 +91,13 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 		carDetailsName.setText(entry.getCarName());
 
 		TextView carMark = (TextView) findViewById(R.id.car_mark);
-		carMark.setText(entry.getMarka());
+		carMark.setText(entry.getBrand());
 
 		TextView carModel = (TextView) findViewById(R.id.car_model);
 		carModel.setText(entry.getModel());
 
 		TextView rokProdukcji = (TextView) findViewById(R.id.rok_produkcji);
-		rokProdukcji.setText(Integer.toString(entry.getRok()));
+		rokProdukcji.setText(Integer.toString(entry.getProduceYear()));
 
 		TextView carDetailsPrzebieg = (TextView) findViewById(R.id.car_details_przebieg);
 		carDetailsPrzebieg.setText(Long.toString(entry.getPrzebieg()));
@@ -108,7 +106,7 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 		carDetailsPojemnoscSilnika.setText(Double.toString(entry.getPoj_silnika()));
 
 		TextView carDetailsPaliwo = (TextView) findViewById(R.id.car_details_paliwo);
-		carDetailsPaliwo.setText(entry.getPaliwo());
+		carDetailsPaliwo.setText(entry.getFuel());
 
 		TextView carDetailsSymbolSilnika = (TextView) findViewById(R.id.car_details_symbol_silnika);
 		carDetailsSymbolSilnika.setText(entry.getSymbol_silnika());
@@ -117,7 +115,7 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 		carDetailsVin.setText(entry.getVin());
 
 		TextView price = (TextView) findViewById(R.id.car_details_pucharse_price);
-		price.setText(Double.toString(entry.getCena()));
+		price.setText(Double.toString(entry.getPrice()));
 
 		Date pucharseDate = new Date(entry.getDateInMms());
 		SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
