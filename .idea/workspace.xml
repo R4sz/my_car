@@ -18,29 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7827fb37-e90f-4b96-9619-2a52ec44ab10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/R4sz.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/AbstractRepository.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/AbstractRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/CarsRepository.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/CarsRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/DataContainer.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/DataContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/ExpensesRepository.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/ExpensesRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/FillupsRepository.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/repository/FillupsRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/SamochodyCarAdapter.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/SamochodyCarAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/SamochodyDetails.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/SamochodyDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/SamochodyEdit.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/SamochodyEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/ServiceDodaj.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/ServiceDodaj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/Statystyki.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/Statystyki.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaDetails.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaDodaj.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaDodaj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaEdit.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaList.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/List/TankowaniaList.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/List/TankowaniaList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaTankAdapter.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaTankAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiDetails.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiDodaj.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiDodaj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiEdit.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiList.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/List/WydatkiList.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/List/WydatkiList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiMaintAdapter.java" afterPath="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiMaintAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_car.iws" />
@@ -116,8 +94,8 @@
       <file leaf-file-name="TankowaniaList.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rasz/app/My_Car/List/TankowaniaList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.4766355" vertical-offset="419" max-vertical-offset="2295">
-              <caret line="116" column="84" selection-start-line="116" selection-start-column="84" selection-end-line="116" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.36761904" vertical-offset="1371" max-vertical-offset="2295">
+              <caret line="121" column="57" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -221,12 +199,12 @@
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/WydatkiList.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/Statystyki.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/repository/FillupsRepository.java" />
-        <option value="$PROJECT_DIR$/src/rasz/app/My_Car/List/TankowaniaList.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaList.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaTankAdapter.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaDetails.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/DataContainer.java" />
         <option value="$PROJECT_DIR$/src/rasz/app/My_Car/TankowaniaEdit.java" />
+        <option value="$PROJECT_DIR$/src/rasz/app/My_Car/List/TankowaniaList.java" />
       </list>
     </option>
   </component>
@@ -547,7 +525,11 @@
       <created>1434298850180</created>
       <updated>1434298850180</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".">
+      <created>1434821797957</created>
+      <updated>1434821797957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -557,7 +539,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4443128" sideWeight="0.83090615" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4443128" sideWeight="0.83090615" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -567,7 +549,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938388" sideWeight="0.8365696" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32938388" sideWeight="0.8365696" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992891" sideWeight="0.4959547" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1037,8 +1019,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rasz/app/My_Car/List/TankowaniaList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4766355" vertical-offset="419" max-vertical-offset="2295">
-          <caret line="116" column="84" selection-start-line="116" selection-start-column="84" selection-end-line="116" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.36761904" vertical-offset="1371" max-vertical-offset="2295">
+          <caret line="121" column="57" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
           <folding />
         </state>
       </provider>
