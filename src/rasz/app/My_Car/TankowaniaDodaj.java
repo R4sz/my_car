@@ -240,7 +240,7 @@ public class TankowaniaDodaj extends Activity implements OnItemSelectedListener 
 			wyborSamochodu = (parent.getItemAtPosition(position)).toString();
 			idsam = DataContainer.samochodyId.get(position);
 			entry = DataContainer.listOfCars.get(position);
-			tankowaniaPrzebieg.setText(Long.toString(entry.getPrzebieg()));
+			tankowaniaPrzebieg.setText(Long.toString(entry.getMileAge()));
 		}
 
 		if (spnir.getId() == R.id.tankowania_paliwo)
@@ -338,7 +338,7 @@ public class TankowaniaDodaj extends Activity implements OnItemSelectedListener 
 
 		if (przebiegStary < przebiegDouble) {
 			wartosci1.put(KEY_PRZEBIEG, przebieg);
-			wartosci1.put(KEY_PRZEJECHANE, (entry.getPrzebieg() - przebiegDouble));
+			wartosci1.put(KEY_PRZEJECHANE, (entry.getMileAge() - przebiegDouble));
 			bd.update(DB_SAMOCHODY_TABLE, wartosci1, idsamint + "=" + "idsam", null);
 		}
 		finish();

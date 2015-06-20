@@ -50,7 +50,7 @@ public class SamochodyCarAdapter extends BaseAdapter {
         modelSam.setText(entry.getModel());
 
         TextView Przebieg = (TextView) convertView.findViewById(R.id.lista_przebieg_samochodu);
-        Przebieg.setText(Long.toString(entry.getPrzebieg()));
+        Przebieg.setText(Long.toString(entry.getMileAge()));
 
         return convertView;
     }

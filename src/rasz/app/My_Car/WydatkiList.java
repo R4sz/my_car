@@ -80,10 +80,10 @@ public class WydatkiList extends Activity {
 			// menuItemIndex = 2 add;
 
 			if (menuItemIndex == 1) {
-				db.delete("maintance", "idmaintance = " + entry.getIdmaint(), null);
+				db.delete("maintance", "idmaintance = " + entry.getId(), null);
 				DataContainer.listOfMaints.remove(positionMaint);
 
-				String lastMaintOdometer = Double.toString(entry.getMileage());
+				String lastMaintOdometer = Double.toString(entry.getMileAge());
 				Double actualCarOdometer = Double.parseDouble(DataContainer.getDataFromDB(this,
 						"SELECT przebieg FROM samochody WHERE idsam = " + entry.getIdsam(), "single"));
 				if (Double.parseDouble(lastMaintOdometer) == actualCarOdometer) {

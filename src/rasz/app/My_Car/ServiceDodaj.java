@@ -246,7 +246,7 @@ public class ServiceDodaj extends Activity implements OnClickListener, OnItemSel
 			wyborSamochodu = (parent.getItemAtPosition(position)).toString();
 			idsam = DataContainer.samochodyId.get(position);
 			entry = DataContainer.listOfCars.get(position);
-			servicePrzebieg.setText(Long.toString(entry.getPrzebieg()));
+			servicePrzebieg.setText(Long.toString(entry.getMileAge()));
 		}
 	}
 

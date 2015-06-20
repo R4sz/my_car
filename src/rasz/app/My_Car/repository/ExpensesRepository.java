@@ -4,86 +4,43 @@ import android.database.Cursor;
 
 public class ExpensesRepository extends AbstractRepository {
 
-	private int idmaint;
-	private int idsam;
-	private Double mileage;
-	private Double cost;
-	private String maintanced;
-	private String date;
-	private String time;
-	private String place;
-	private String notes;
-	private Long dateWmms;
+    private int idsam;
+    private String maintanced;
+    private String date;
+    private String time;
 
-	public ExpensesRepository() {
-	}
+    public ExpensesRepository() {
+    }
 
-	public ExpensesRepository(int idmaint, int idsam, Double mileage, Double cost, String maintanced, String date, String time, String place, String notes,
-			Long dateWmms) {
+    public ExpensesRepository(Cursor cursor) {
 
-		this.idmaint = idmaint;
-		this.idsam = idsam;
-		this.mileage = mileage;
-		this.cost = cost;
-		this.maintanced = maintanced;
-		this.date = date;
-		this.time = time;
-		this.place = place;
-		this.notes = notes;
-		this.dateWmms = dateWmms;
-	}
+        this.id = cursor.getInt(0);
+        this.idsam = cursor.getInt(1);
+        this.mileAge = cursor.getLong(2);
+        this.cost = cursor.getDouble(3);
+        this.maintanced = cursor.getString(4);
+        this.date = cursor.getString(5);
+        this.time = cursor.getString(6);
+        this.place = cursor.getString(7);
+        this.notes = cursor.getString(8);
+        this.timestamp = cursor.getLong(9);
+    }
 
-	public ExpensesRepository(Cursor cc) {
-		
-		this.idmaint = cc.getInt(0);
-		this.idsam = cc.getInt(1);
-		this.mileage = cc.getDouble(2);
-		this.cost = cc.getDouble(3);
-		this.maintanced = cc.getString(4);
-		this.date = cc.getString(5);
-		this.time = cc.getString(6);
-		this.place = cc.getString(7);
-		this.notes = cc.getString(8);
-		this.dateWmms = cc.getLong(9);
-	}
-	
-	public int getIdmaint() {
-		return idmaint;
-	}
 
-	public int getIdsam() {
-		return idsam;
-	}
+    public int getIdsam() {
+        return idsam;
+    }
 
-	public Double getMileage() {
-		return mileage;
-	}
+    public String getMaintanced() {
+        return maintanced;
+    }
 
-	public Double getCost() {
-		return cost;
-	}
+    public String getDate() {
+        return date;
+    }
 
-	public String getMaintanced() {
-		return maintanced;
-	}
+    public String getTime() {
+        return time;
+    }
 
-	public String getDate() {
-		return date;
-	}
-
-	public String getTime() {
-		return time;
-	}
-
-	public String getPlace() {
-		return place;
-	}
-
-	public String getNotes() {
-		return notes;
-	}
-
-	public Long getDatewmms() {
-		return dateWmms;
-	}
 }

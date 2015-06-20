@@ -257,10 +257,10 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 		paliwoForSpinner = tankEntry.getRodzajPaliwa();
 		timeTank = tankEntry.getTime();
 		dateTank = tankEntry.getDate();
-		idTank = tankEntry.getIdTank();
+		idTank = tankEntry.getId();
 
 		tankowaniaPrzebieg = (EditText) findViewById(R.id.tankowania_przebieg);
-		tankowaniaPrzebieg.setText(Double.toString(tankEntry.getPrzebieg()));
+		tankowaniaPrzebieg.setText(Double.toString(tankEntry.getMileAge()));
 
 		tankowaniaLitry = (EditText) findViewById(R.id.tankowania_ilosc_wlanych_litrow);
 		tankowaniaLitry.setText(Double.toString(tankEntry.getLitry()));
@@ -269,13 +269,13 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 		tankowaniaCenaLitra.setText(Double.toString(tankEntry.getCenaLitra()));
 
 		tankowaniaKosztCalosc = (EditText) findViewById(R.id.tankowania_koszt_tankowania);
-		tankowaniaKosztCalosc.setText(Double.toString(tankEntry.getWartosc()));
+		tankowaniaKosztCalosc.setText(Double.toString(tankEntry.getCost()));
 
 		tankowaniaStacja = (EditText) findViewById(R.id.tankowania_stacja);
 		tankowaniaStacja.setText(tankEntry.getStacja());
 
 		tankowaniaNotatki = (EditText) findViewById(R.id.tankowania_notatki);
-		tankowaniaNotatki.setText(tankEntry.getNotki());
+		tankowaniaNotatki.setText(tankEntry.getNotes());
 	}
 
 	public void saveNewTank(View v) {
@@ -353,7 +353,7 @@ public class TankowaniaEdit extends Activity implements OnItemSelectedListener {
 			przebiegUpdt = Double.parseDouble(przebieg);
 		}
 
-		else if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) == tankEntry.getPrzebieg()) {
+		else if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) == tankEntry.getMileAge()) {
 
 			Double lastMaintOdometer = Double.parseDouble(DataContainer.getDataFromDB(this, "SELECT przebieg FROM maintance WHERE idsam = " + idsam
 					+ " ORDER BY przebieg DESC", "single"));

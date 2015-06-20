@@ -49,10 +49,10 @@ public class TankowaniaTankAdapter extends BaseAdapter implements OnClickListene
 		tvContact.setText(Double.toString(entry.getLitry()));
 
 		TextView tvPhone = (TextView) convertView.findViewById(R.id.tvMobile);
-		tvPhone.setText(Double.toString(entry.getWartosc()));
+		tvPhone.setText(Double.toString(entry.getCost()));
 
 		TextView tvMail = (TextView) convertView.findViewById(R.id.tvMail);
-		tvMail.setText(Double.toString(entry.getPrzebieg()));
+		tvMail.setText(Double.toString(entry.getMileAge()));
 
 		TextView Date = (TextView) convertView.findViewById(R.id.TankDate);
 		Date.setText(entry.getDate());

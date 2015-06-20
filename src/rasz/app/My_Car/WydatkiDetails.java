@@ -35,7 +35,7 @@ public class WydatkiDetails extends Activity {
 		CarName.setText(WydatkiMaintAdapter.getCarName(MaintEntry));
 
 		TextView mileage = (TextView) findViewById(R.id.maintance_car_odometer);
-		mileage.setText(Double.toString(MaintEntry.getMileage()));
+		mileage.setText(Double.toString(MaintEntry.getMileAge()));
 
 		TextView serviced = (TextView) findViewById(R.id.maintance_wydatek);
 		serviced.setText(MaintEntry.getMaintanced());

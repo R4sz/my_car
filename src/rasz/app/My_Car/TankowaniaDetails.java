@@ -55,7 +55,7 @@ public class TankowaniaDetails extends Activity {
 		name.setText(GetCarName());
 
 		TextView odoMeter = (TextView) findViewById(R.id.car_odometer);
-		odoMeter.setText(Double.toString(entry.getPrzebieg()));
+		odoMeter.setText(Double.toString(entry.getMileAge()));
 
 		TextView liters = (TextView) findViewById(R.id.litry);
 		liters.setText(Double.toString(entry.getLitry()));
@@ -64,7 +64,7 @@ public class TankowaniaDetails extends Activity {
 		costPerLiter.setText(Double.toString(entry.getCenaLitra()));
 
 		TextView cost = (TextView) findViewById(R.id.total_tank_cost);
-		cost.setText(Double.toString(entry.getWartosc()));
+		cost.setText(Double.toString(entry.getCost()));
 
 		TextView przejechane = (TextView) findViewById(R.id.przejechane);
 		przejechane.setText(Double.toString(entry.getPrzejechane()));
@@ -74,7 +74,7 @@ public class TankowaniaDetails extends Activity {
 		SQLiteDatabase db = DataContainer.database.getReadableDatabase();
 		Cursor c = db.rawQuery("SELECT idtankowania, przebieg FROM tankowania WHERE idsam = " + entry.getIdsamochoduZtankowania(), null);
 		while(c.moveToNext()) {
-			if(c.getInt(0) == entry.getIdTank()) {
+			if(c.getInt(0) == entry.getId()) {
 				if(c.getCount() > 1 && position != 0) {
 				c.moveToPrevious(); 
 				}
@@ -84,7 +84,7 @@ public class TankowaniaDetails extends Activity {
 		}
 		
 		if(previousTankOdometer != 0.0) {	
-		spalanie =  entry.getLitry() * 100 / (entry.getPrzebieg() - previousTankOdometer); 
+		spalanie =  entry.getLitry() * 100 / (entry.getMileAge() - previousTankOdometer);
 		}
 		else spalanie = 0.0;
 		
@@ -100,7 +100,7 @@ public class TankowaniaDetails extends Activity {
 		stacja.setText(entry.getStacja());
 
 		TextView notki = (TextView) findViewById(R.id.notatki);
-		notki.setText(entry.getNotki());
+		notki.setText(entry.getNotes());
 
 		TextView PreviousTankDate = (TextView) findViewById(R.id.poprzednie_tankowanie);
 		String PoprzednieTankowanie = "b/d";

@@ -1,44 +1,38 @@
 package rasz.app.My_Car.repository;
+
 import android.database.Cursor;
 
 public abstract class AbstractRepository {
 
-	private int id;
-	private double mileAge;
-	private double cost;
-	private long timestamp;
-	private String place;
-	private String notes;
+    int id;
+    Long mileAge;
+    double cost;
+    long timestamp;
+    String place;
+    String notes;
 
-    public AbstractRepository (Cursor cursor) {
-        this.id = kursor.getInt(0);
-
-
-
+    public int getId() {
+        return id;
     }
 
-	public int getId() {
-		return id;
-	}
+    public Long getMileAge() {
+        return mileAge;
+    }
 
-	public double getMileAge() {
-		return mileAge;
-	}
+    public double getCost() {
+        return cost;
+    }
 
-	public double getCost() {
-		return cost;
-	}
+    public long getTimestamp() {
+        return timestamp;
+    }
 
-	public long getTimestamp() {
-		return timestamp;
-	}
+    public String getPlace() {
+        return place;
+    }
 
-	public String getPlace() {
-		return place;
-	}
-
-	public String getNotes() {
-		return notes;
-	}
+    public String getNotes() {
+        return notes;
+    }
 
 }

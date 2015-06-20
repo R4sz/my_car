@@ -116,7 +116,7 @@ public class TankowaniaList extends Activity {
 			if (menuItemIndex == 1) {
 				bd.delete("tankowania", "idtankowania" + "=" + entry.getIdTank(), null);
 				DataContainer.listOfRefuels.remove(idListForExtraMenu);
-				Double lastTankOdometer = entry.getPrzebieg();
+				Double lastTankOdometer = entry.getMileAge();
 				String actualCarOdometer = DataContainer.getDataFromDB(this,
 						"SELECT przebieg FROM samochody WHERE idsam = " + entry.getIdsamochoduZtankowania(), "single");
 				if ((lastTankOdometer) == Double.parseDouble(actualCarOdometer)) {

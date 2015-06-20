@@ -44,7 +44,7 @@ public class WydatkiMaintAdapter extends BaseAdapter implements OnClickListener 
 		}
 
 		TextView mileage = (TextView) convertView.findViewById(R.id.maintance_list_mileage);
-		mileage.setText(Double.toString(maintEntry.getMileage()));
+		mileage.setText(Double.toString(maintEntry.getMileAge()));
 
 		TextView maintanced = (TextView) convertView.findViewById(R.id.maint_list_maintanced);
 		maintanced.setText(maintEntry.getMaintanced());

@@ -231,7 +231,7 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 		label.setText("Edytuj Wydatek...");
 
 		maintancePrzebieg = (EditText) findViewById(R.id.maintance_przebieg);
-		maintancePrzebieg.setText(Double.toString(maintEntry.getMileage()));
+		maintancePrzebieg.setText(Double.toString(maintEntry.getMileAge()));
 
 		maintanceKoszt = (EditText) findViewById(R.id.maintance_koszt);
 		maintanceKoszt.setText(Double.toString(maintEntry.getCost()));
@@ -273,13 +273,13 @@ public class WydatkiEdit extends Activity implements OnItemSelectedListener {
 		wartosci.put(KEY_TIME, time);
 		wartosci.put(KEY_NOTATKI, notatki);
 		wartosci.put(KEY_DATEMILLIS, dateInMillis);
-		bd.update(DB_MAINTANCE_TABLE, wartosci, "idmaintance = " + maintEntry.getIdmaint(), null);
+		bd.update(DB_MAINTANCE_TABLE, wartosci, "idmaintance = " + maintEntry.getId(), null);
 
 		if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) < Double.parseDouble(przebieg)) {
 			przebiegUpdt = Double.parseDouble(przebieg);
 		}
 
-		else if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) == maintEntry.getMileage()) {
+		else if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) == maintEntry.getMileAge()) {
 
 			Double lastTankOdometer = Double.parseDouble(DataContainer.getDataFromDB(this, "SELECT przebieg FROM tankowania WHERE idsam = " + idsam
 					+ " ORDER BY przebieg DESC", "single"));

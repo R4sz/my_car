@@ -107,7 +107,7 @@ public class DataContainer {
 
 		for (int i = 0; i < listOfRef.size(); i++) {
 			tankEntry = listOfRef.get(i);
-			totalTankCost += tankEntry.getWartosc();
+			totalTankCost += tankEntry.getCost();
 			totalLiters += tankEntry.getLitry();
 
 			// spalanie

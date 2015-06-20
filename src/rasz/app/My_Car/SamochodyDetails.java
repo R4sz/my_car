@@ -100,24 +100,24 @@ public class SamochodyDetails extends Activity implements OnClickListener {
 		rokProdukcji.setText(Integer.toString(entry.getProduceYear()));
 
 		TextView carDetailsPrzebieg = (TextView) findViewById(R.id.car_details_przebieg);
-		carDetailsPrzebieg.setText(Long.toString(entry.getPrzebieg()));
+		carDetailsPrzebieg.setText(Long.toString(entry.getMileAge()));
 
 		TextView carDetailsPojemnoscSilnika = (TextView) findViewById(R.id.car_details_pojemnosc_silnika);
-		carDetailsPojemnoscSilnika.setText(Double.toString(entry.getPoj_silnika()));
+		carDetailsPojemnoscSilnika.setText(Double.toString(entry.getEngineCap()));
 
 		TextView carDetailsPaliwo = (TextView) findViewById(R.id.car_details_paliwo);
 		carDetailsPaliwo.setText(entry.getFuel());
 
 		TextView carDetailsSymbolSilnika = (TextView) findViewById(R.id.car_details_symbol_silnika);
-		carDetailsSymbolSilnika.setText(entry.getSymbol_silnika());
+		carDetailsSymbolSilnika.setText(entry.getEngineSymbol());
 
 		TextView carDetailsVin = (TextView) findViewById(R.id.car_details_vin);
 		carDetailsVin.setText(entry.getVin());
 
 		TextView price = (TextView) findViewById(R.id.car_details_pucharse_price);
-		price.setText(Double.toString(entry.getPrice()));
+		price.setText(Double.toString(entry.getCost()));
 
-		Date pucharseDate = new Date(entry.getDateInMms());
+		Date pucharseDate = new Date(entry.getTimestamp());
 		SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 
 		TextView date = (TextView) findViewById(R.id.car_details_pucharse_date);

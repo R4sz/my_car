@@ -118,7 +118,7 @@ public class Statystyki extends Activity {
 		Double summaryCarsPrice = 0.0;
 		for (int i = 0 ; i < DataContainer.listOfCars.size() ; i++ ) {
 			samEntry = DataContainer.listOfCars.get(i);
-			summaryCarsPrice += samEntry.getPrice();
+			summaryCarsPrice += samEntry.getCost();
 		}
 				
 		TextView pucharse_cost = (TextView) findViewById(R.id.pucharse_cost);

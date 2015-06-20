@@ -107,23 +107,23 @@ public class SamochodyEdit extends Activity implements OnClickListener, AdapterV
 		samochody_rok_produkcji.setText(rok);
 
 		samochody_aktualny_przebieg = (EditText) findViewById(R.id.samochody_aktualny_przebieg);
-		String przeb = Long.toString(entry.getPrzebieg());
+		String przeb = Long.toString(entry.getMileAge());
 		samochody_aktualny_przebieg.setText(przeb);
 
 		samochody_pojemnosc_silnika = (EditText) findViewById(R.id.samochody_pojemnosc_silnika);
-		String poj = Double.toString(entry.getPoj_silnika());
+		String poj = Double.toString(entry.getEngineCap());
 		samochody_pojemnosc_silnika.setText(poj);
 
 		samochody_symbol_silnika = (EditText) findViewById(R.id.samochody_symbol_silnika);
-		samochody_symbol_silnika.setText(entry.getSymbol_silnika());
+		samochody_symbol_silnika.setText(entry.getEngineSymbol());
 
 		samochody_vin = (EditText) findViewById(R.id.samochody_vin);
 		samochody_vin.setText(entry.getVin());
 
 		samochodyPrice = (EditText) findViewById(R.id.samochody_price);
-		samochodyPrice.setText(Double.toString(entry.getPrice()));
+		samochodyPrice.setText(Double.toString(entry.getCost()));
 
-		Date pucharseDate = new Date(entry.getDateInMms());
+		Date pucharseDate = new Date(entry.getTimestamp());
 		SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 
 		samochody_pucharse_time = (Button) findViewById(R.id.samochody_pucharse_time);

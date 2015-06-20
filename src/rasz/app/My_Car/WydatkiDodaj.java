@@ -205,7 +205,7 @@ public class WydatkiDodaj extends Activity implements OnItemSelectedListener {
 			wyborSamochodu = (parent.getItemAtPosition(position)).toString();
 			idsam = samochodyId.get(position);
 			entry = DataContainer.listOfCars.get(position);
-			maintancePrzebieg.setText(Long.toString(entry.getPrzebieg()));
+			maintancePrzebieg.setText(Long.toString(entry.getMileAge()));
 		}
 		if (spnir.getId() == R.id.maintance_maintanced) {
 			maintanceChoose = (parent.getItemAtPosition(position)).toString();
