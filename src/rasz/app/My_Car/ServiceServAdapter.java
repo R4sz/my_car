@@ -44,7 +44,7 @@ public class ServiceServAdapter extends BaseAdapter implements OnClickListener {
 		}
 
 		TextView mileage = (TextView) convertView.findViewById(R.id.service_list_mileage);
-		mileage.setText(Double.toString(servEntry.getMileage()));
+		mileage.setText(Double.toString(servEntry.getMileAge()));
 
 		TextView CarName = (TextView) convertView.findViewById(R.id.serv_list_car_name);
 		CarName.setText(GetCarName(servEntry));

@@ -268,7 +268,7 @@ public class ServiceEdit extends Activity implements OnClickListener, OnItemSele
 		service_koszt_calosc = (EditText) findViewById(R.id.service_koszt_serwisowania);
 		serviceMiejsce = (EditText) findViewById(R.id.service_place);
 		serviceNotatki = (EditText) findViewById(R.id.service_notatki);
-		service_przebieg.setText(Double.toString(servEntry.getMileage()));
+		service_przebieg.setText(Double.toString(servEntry.getMileAge()));
 		service_koszt_calosc.setText(Double.toString(servEntry.getCost()));
 		serviceMiejsce.setText(servEntry.getPlace());
 		serviceNotatki.setText(servEntry.getNotes());
@@ -306,13 +306,13 @@ public class ServiceEdit extends Activity implements OnClickListener, OnItemSele
 		wartosci.put(KEY_TIME, time);
 		wartosci.put(KEY_NOTATKI, notatki);
 		wartosci.put(KEY_DATEMILLIS, dateInMillis);
-		bd.update(DB_NAPRAWY_TABLE, wartosci, "idnaprawy = " + servEntry.getIdserv(), null);
+		bd.update(DB_NAPRAWY_TABLE, wartosci, "idnaprawy = " + servEntry.getId(), null);
 
 		if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) < Double.parseDouble(przebieg)) {
 			przebiegUpdt = Double.parseDouble(przebieg);
 		}
 
-		else if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) == servEntry.getMileage()) {
+		else if (DataContainer.getCarMileage(Integer.parseInt(idsamString)) == servEntry.getMileAge()) {
 
 			Double lastTankOdometer = Double.parseDouble(DataContainer.getDataFromDB(this, "SELECT przebieg FROM tankowania WHERE idsam = " + idsam
 					+ " ORDER BY przebieg DESC", "single"));

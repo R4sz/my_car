@@ -29,7 +29,6 @@ public class CarsList extends Activity {
     private final static int CONTEXT_DELETE = 1;
     private final static int CONTEXT_ADD = 2;
 
-
     public static CarsRepository entry = new CarsRepository();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -45,23 +44,7 @@ public class CarsList extends Activity {
     }
 
     private void initListView() {
-
-        TextView active = (TextView) findViewById(R.id.active_cars);
-        String aktywne = "Aktywne Samochody:";
-        for (int i = 0; i < DataContainer.listOfCars.size(); i++) {
-
-            entry = DataContainer.listOfCars.get(i);
-            if (entry.getAktywny() == 1) {
-                aktywne += " " + entry.getCarName();
-            }
-        }
-
-        if (!aktywne.equals("Aktywne Samochody:")) {
-            active.setText(aktywne);
-        } else {
-            active.setText("Brak aktywnych samochod�w");
-        }
-
+        initHeader();
         ListView list = (ListView) findViewById(R.id.ListView01);
         list.setClickable(true);
 
@@ -76,6 +59,26 @@ public class CarsList extends Activity {
         });
         list.setAdapter(adapter);
         registerForContextMenu(list);
+    }
+
+    private void initHeader() {
+        TextView active = (TextView) findViewById(R.id.active_cars);
+        active.setText(checkActiveCars());
+    }
+
+    private String checkActiveCars() {
+        String active = "Aktywne samochody:";
+        int activeCounter = 0;
+        for (CarsRepository en : DataContainer.listOfCars) {
+            if (en.getAktywny() == 1) {
+                active += " " + entry.getCarName();
+                activeCounter++;
+            }
+        }
+        if (activeCounter == 0) {
+            active = "Brak aktywnych samochodow";
+        }
+        return active;
     }
 
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {

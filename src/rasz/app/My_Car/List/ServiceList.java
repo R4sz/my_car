@@ -98,11 +98,11 @@ public class ServiceList extends Activity {
 			// menuItemIndex = 2 add;
 
 			if (menuItemIndex == 1) {
-				db.delete("naprawy", "idnaprawy = " + entry.getIdserv(), null);
+				db.delete("naprawy", "idnaprawy = " + entry.getId(), null);
 				DataContainer.listOfServs.remove(positionServ);
 				
 				
-				String lastServOdometer = Double.toString(entry.getMileage());
+				String lastServOdometer = Double.toString(entry.getMileAge());
 				Double actualCarOdometer = Double.parseDouble(DataContainer.getDataFromDB(this, "SELECT przebieg FROM samochody WHERE idsam = " +
 						entry.getIdsam(), "single"));
 				if(Double.parseDouble(lastServOdometer) == actualCarOdometer) {

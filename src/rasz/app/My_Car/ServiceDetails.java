@@ -35,7 +35,7 @@ public class ServiceDetails extends Activity {
 		CarName.setText(ServiceServAdapter.GetCarName(servEntry));
 
 		TextView mileage = (TextView) findViewById(R.id.service_Przebieg1);
-		mileage.setText(Double.toString(servEntry.getMileage()));
+		mileage.setText(Double.toString(servEntry.getMileAge()));
 
 		TextView cost = (TextView) findViewById(R.id.service_costt);
 		cost.setText(Double.toString(servEntry.getCost()));
